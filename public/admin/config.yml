@@ -1,0 +1,249 @@
+# local_backend: true
+backend:
+  name: git-gateway
+  repo: anwaozo/LawyerSite
+  branch: master # Branch to update (optional; defaults to master)
+media_folder: public/img
+public_folder: img
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "_"
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "home"
+        label: "HomePage"
+        file: "content/pages/home.md"
+        fields:
+          - name: "Logo"
+            label: "Logo"
+            widget: "object"
+            fields:
+              - { label: "Header Logo", name: "icon", widget: "image" }
+              - { label: "Footer Logo", name: "footerIcon", widget: "image" }
+
+          - name: "Menu"
+            label: "Menu"
+            widget: "object"
+            fields:
+              - name: "HeaderMenu"
+                label: "Header Menu"
+                widget: "list"
+                fields:
+                  - { label: "Link Label", name: "linkLabel", widget: "string" }
+                  - { label: "Link Path", name: "linkPath", widget: "string" }
+
+              - name: "FooterMenu"
+                label: "Footer Menu"
+                widget: "list"
+                fields:
+                  - { label: "Link Label", name: "linkLabel", widget: "string" }
+                  - { label: "Link Path", name: "linkPath", widget: "string" }
+
+          - name: "MetaTags"
+            label: "Meta Tags"
+            widget: "object"
+            fields:
+              - { label: "Meta Title", name: "metatitle", widget: "string" }
+              - {
+                  label: "Meta Description",
+                  name: "metaDescription",
+                  widget: "string",
+                }
+
+          - name: "HeroSection"
+            label: "Hero Section"
+            widget: "object"
+            fields:
+              - { label: "Hero Image", name: "HeroImage", widget: "image" }
+              - {
+                  label: "Styled Heading",
+                  name: "StyledHeading",
+                  widget: "string",
+                }
+              - { label: "Heading", name: "Heading", widget: "string" }
+              - { label: "Description", name: "Description", widget: "string" }
+              - name: "SectionLink"
+                label: "Section Link"
+                widget: "object"
+                fields:
+                  - { label: "Link Label", name: "LinkLabel", widget: "string" }
+                  - { label: "Link Path", name: "LinkPath", widget: "string" }
+              - name: "SocialMediaIcons"
+                label: "Social Media Icons"
+                widget: "list"
+                fields:
+                  - { label: "Icon", name: "Icon", widget: "image" }
+                  - { label: "Icon Path", name: "IconPath", widget: "string" }
+
+          - name: "LegalTeam"
+            label: "Legal Team Section"
+            widget: "object"
+            fields:
+              - { label: "Section Title", name: "Heading", widget: "string" }
+              - {
+                  label: "Section subTitle",
+                  name: "subHeading",
+                  widget: "text",
+                }
+              - name: "SectionLink"
+                label: "Section Link"
+                widget: "object"
+                fields:
+                  - { label: "Link Label", name: "LinkLabel", widget: "string" }
+                  - { label: "Link Path", name: "LinkPath", widget: "string" }
+              - name: "SectionInfo"
+                label: "Section Info"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - {
+                      label: "Displayed Number",
+                      name: "DisplayedNumber",
+                      widget: "string",
+                    }
+
+          - name: "LegalPractices"
+            label: "Legal Practices Section"
+            widget: "object"
+            fields:
+              - { label: "Section Title", name: "Heading", widget: "string" }
+              - {
+                  label: "Section subTitle",
+                  name: "subHeading",
+                  widget: "text",
+                }
+              - {
+                  label: "Section Image",
+                  name: "SectionImage",
+                  widget: "image",
+                }
+              - name: "SectionLink"
+                label: "Section Link"
+                widget: "object"
+                fields:
+                  - { label: "Link Label", name: "LinkLabel", widget: "string" }
+                  - { label: "Link Path", name: "LinkPath", widget: "string" }
+              - name: "SectionInfo"
+                label: "Section Info"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Path", name: "Path", widget: "string" }
+                  - { label: "Icon", name: "Icon", widget: "image" }
+
+          - name: "BussinessInformation"
+            label: "Bussiness Information Section"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "Title", widget: "string" }
+              - { label: "Content", name: "Content", widget: "string" }
+
+      - label: "About"
+        name: "about"
+        file: "content/pages/about.md"
+        fields:
+          - name: "MetaTags"
+            label: "Meta Tags"
+            widget: "object"
+            fields:
+              - { label: "Meta Title", name: "metatitle", widget: "string" }
+              - {
+                  label: "Meta Description",
+                  name: "metaDescription",
+                  widget: "string",
+                }
+          - name: "WelcomeSection"
+            label: "Welcome About Section"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Sub Heading", name: "subHeading", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+
+          - { label: "Body", name: "body", widget: "markdown" }
+
+  - label: "Blog"
+    name: "blog"
+    folder: "blog/post"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      # - {
+      #     label: "Publish Date",
+      #     name: "date",
+      #     widget: "datetime",
+      #     required: true,
+      #   }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "text",
+          required: true,
+        }
+      - {
+          label: "Featured Image",
+          name: "image",
+          widget: "image",
+          required: true,
+        }
+      - { label: "Body", name: "body", widget: "markdown", required: true }
+
+  - label: "Properties"
+    name: "properties"
+    folder: "properties"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
+    fields:
+      - {
+          label: "Property Name",
+          name: "PropertyName",
+          widget: "string",
+          required: true,
+        }
+      - {
+          label: "Amount of Property",
+          name: "amount",
+          widget: "string",
+          required: true,
+        }
+      # - {
+      #     label: "Publish Date",
+      #     name: "date",
+      #     widget: "datetime",
+      #     required: true,
+      #   }
+      - {
+          label: "Location",
+          name: "location",
+          widget: "string",
+          required: true,
+        }
+      - {
+          label: "Number of Beds",
+          name: "noofbeds",
+          widget: "string",
+          required: true,
+        }
+      - {
+          label: "Number of Baths",
+          name: "noofbaths",
+          widget: "string",
+          required: true,
+        }
+      - {
+          label: "Number of Parking",
+          name: "noofparking",
+          widget: "string",
+          required: true,
+        }
+      - {
+          label: "Featured Image",
+          name: "image",
+          widget: "image",
+          required: true,
+        }
+      - { label: "Body", name: "body", widget: "markdown", required: true }
