@@ -1,12 +1,8 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import React from "react";
-import { attributes, react as HomeContent } from "../../content/home.md";
 
 export default function Home() {
-  let { title, cats } = attributes;
-  console.log("title", title);
-  console.log("cats", cats);
   return (
     <React.Fragment>
       <header className="header">
