@@ -10,7 +10,7 @@ export default function Home() {
 				<div className="header-block">
 					<a className="logo" href="#">
 						<img
-							src="./images/Logo.png"
+							src="/images/Logo.png"
 							width=""
 							height=""
 							loading="lazy"
@@ -45,50 +45,95 @@ export default function Home() {
 		<section className="home-banner-area">
 			<div className="page-container">
 				<div className="home-banner-content">
-					<div className="home-social-media">
-						<a href="#">
+					<div className="home-social-media" data-aos="fade-up">
+						<a
+							href="#"
+							data-aos="fade-right"
+							data-aos-delay="200"
+							data-aos-duration="1500"
+						>
 							<img
-								src="./images/icons/linkedin.svg"
+								src="/images/icons/linkedin.svg"
 								alt="linkedin"
 							/>
 						</a>
-						<a href="#">
+						<a
+							href="#"
+							data-aos="fade-right"
+							data-aos-delay="300"
+							data-aos-duration="1500"
+						>
 							<img
-								src="./images/icons/instagram.svg"
+								src="/images/icons/instagram.svg"
 								alt="instagram"
 							/>
 						</a>
-						<a href="#">
+						<a
+							href="#"
+							data-aos="fade-right"
+							data-aos-delay="400"
+							data-aos-duration="1500"
+						>
 							<img
-								src="./images/icons/facebook.svg"
+								src="/images/icons/facebook.svg"
 								alt="facebook"
 							/>
 						</a>
-						<a href="#">
-							<img src="./images/icons/extra.svg" alt="" />
+						<a
+							href="#"
+							data-aos="fade-right"
+							data-aos-delay="500"
+							data-aos-duration="1500"
+						>
+							<img src="/images/icons/extra.svg" alt="" />
 						</a>
 					</div>
 					<div className="banner-content">
-						<h1>Experienced</h1>
-						<h2>Trusted Legal Counsel</h2>
-						<p>
+						<h1
+							data-aos="fade-left"
+							data-aos-delay="200"
+							data-aos-duration="1500"
+						>
+							Experienced
+						</h1>
+						<h2
+							data-aos="fade-left"
+							data-aos-delay="300"
+							data-aos-duration="1500"
+						>
+							Trusted Legal Counsel
+						</h2>
+						<p
+							data-aos="fade-left"
+							data-aos-delay="400"
+							data-aos-duration="1500"
+						>
 							Lorem ipsum dolor sit amet, consectetur adipiscing
 							elit. Suspendisse varius enim in eros elementum
 							tristique. Duis cursus, mi quis viverra ornare, eros
 							dolor interdum nulla, ut commodo diam libero vitae
 							erat.
 						</p>
-						<a className="btn btn-primary">Call for consultation</a>
+						<a
+							className="btn btn-primary"
+							data-aos="fade-up"
+							data-aos-delay="600"
+							data-aos-duration="1500"
+							>Call for consultation</a
+						>
 					</div>
 				</div>
 				<div className="home-banner-photo">
 					<img
-						src="./images/home-banner.jpg"
+						src="/images/home-banner.jpg"
 						width="1920"
 						height="395"
 						alt=""
 						loading="lazy"
 						decoding="async"
+						data-aos="zoom-in"
+						data-aos-delay="300"
+						data-aos-duration="1500"
 					/>
 				</div>
 			</div>
@@ -100,8 +145,18 @@ export default function Home() {
 				<div className="row">
 					<div className="col-6">
 						<div className="about-content-block">
-							<h4>Your Legal Partner in Every Step</h4>
-							<p>
+							<h4
+								data-aos="fade-right"
+								data-aos-delay="200"
+								data-aos-duration="1500"
+							>
+								Your Legal Partner in Every Step
+							</h4>
+							<p
+								data-aos="fade-right"
+								data-aos-delay="300"
+								data-aos-duration="1500"
+							>
 								Our team of accomplished attorneys brings a
 								wealth of legal knowledge and expertise across
 								various practice areas. Whether you need
@@ -110,24 +165,50 @@ export default function Home() {
 								issues, we have the skills to represent your
 								interests effectively.
 							</p>
-							<a className="btn btn-primary">Read More</a>
+							<a
+								className="btn btn-primary"
+								data-aos="fade-right"
+								data-aos-delay="400"
+								data-aos-duration="1500"
+								>Read More</a
+							>
 						</div>
 					</div>
 					<div className="col-6">
 						<div className="about-info">
-							<div className="about-info-item">
+							<div
+								className="about-info-item"
+								data-aos="zoom-in"
+								data-aos-delay="200"
+								data-aos-duration="1500"
+							>
 								<h6>12</h6>
 								<p>Team members</p>
 							</div>
-							<div className="about-info-item">
+							<div
+								className="about-info-item"
+								data-aos="zoom-in"
+								data-aos-delay="300"
+								data-aos-duration="1500"
+							>
 								<h6>32</h6>
 								<p>Cases won</p>
 							</div>
-							<div className="about-info-item">
+							<div
+								className="about-info-item"
+								data-aos="zoom-in"
+								data-aos-delay="400"
+								data-aos-duration="1500"
+							>
 								<h6>20</h6>
 								<p>Happy clients</p>
 							</div>
-							<div className="about-info-item">
+							<div
+								className="about-info-item"
+								data-aos="zoom-in"
+								data-aos-delay="500"
+								data-aos-duration="1500"
+							>
 								<h6>2</h6>
 								<p>Branches</p>
 							</div>
@@ -142,15 +223,31 @@ export default function Home() {
 			<div className="page-container">
 				<div className="legal-practice-block">
 					<header>
-						<h4>Our Legal Practices</h4>
-						<a>More practices</a>
+						<h4
+							data-aos="fade-down"
+							data-aos-delay="200"
+							data-aos-duration="1500"
+						>
+							Our Legal Practices
+						</h4>
+						<a
+							data-aos="fade-down"
+							data-aos-delay="400"
+							data-aos-duration="1500"
+							>More practices</a
+						>
 					</header>
 					<div className="row">
-						<div className="col-4">
+						<div
+							className="col-4"
+							data-aos="fade-right"
+							data-aos-delay="200"
+							data-aos-duration="1500"
+						>
 							<div className="legal-item">
 								<div className="legal-icon">
 									<img
-										src="./images/icons/family-law.svg"
+										src="/images/icons/family-law.svg"
 										width=""
 										height=""
 										loading="lazy"
@@ -161,11 +258,16 @@ export default function Home() {
 								<p>FAMILY LAW</p>
 							</div>
 						</div>
-						<div className="col-4">
+						<div
+							className="col-4"
+							data-aos="fade-right"
+							data-aos-delay="300"
+							data-aos-duration="1500"
+						>
 							<div className="legal-item">
 								<div className="legal-icon">
 									<img
-										src="./images/icons/workers-law.svg"
+										src="/images/icons/workers-law.svg"
 										width=""
 										height=""
 										loading="lazy"
@@ -176,11 +278,16 @@ export default function Home() {
 								<p>WORKERS LAW</p>
 							</div>
 						</div>
-						<div className="col-4">
+						<div
+							className="col-4"
+							data-aos="fade-right"
+							data-aos-delay="400"
+							data-aos-duration="1500"
+						>
 							<div className="legal-item">
 								<div className="legal-icon">
 									<img
-										src="./images/icons/corporate-law.svg"
+										src="/images/icons/corporate-law.svg"
 										width=""
 										height=""
 										loading="lazy"
@@ -191,11 +298,16 @@ export default function Home() {
 								<p>CORPORATE LAW</p>
 							</div>
 						</div>
-						<div className="col-4">
+						<div
+							className="col-4"
+							data-aos="fade-right"
+							data-aos-delay="500"
+							data-aos-duration="1500"
+						>
 							<div className="legal-item">
 								<div className="legal-icon">
 									<img
-										src="./images/icons/criminal-law.svg"
+										src="/images/icons/criminal-law.svg"
 										width=""
 										height=""
 										loading="lazy"
@@ -206,11 +318,16 @@ export default function Home() {
 								<p>CRIMINAL LAW</p>
 							</div>
 						</div>
-						<div className="col-4">
+						<div
+							className="col-4"
+							data-aos="fade-right"
+							data-aos-delay="600"
+							data-aos-duration="1500"
+						>
 							<div className="legal-item">
 								<div className="legal-icon">
 									<img
-										src="./images/icons/business-litigation.svg"
+										src="/images/icons/business-litigation.svg"
 										width=""
 										height=""
 										loading="lazy"
@@ -221,11 +338,16 @@ export default function Home() {
 								<p>BUSINESS LITIGATION</p>
 							</div>
 						</div>
-						<div className="col-4">
+						<div
+							className="col-4"
+							data-aos="fade-right"
+							data-aos-delay="700"
+							data-aos-duration="1500"
+						>
 							<div className="legal-item">
 								<div className="legal-icon">
 									<img
-										src="./images/icons/employment-law.svg"
+										src="/images/icons/employment-law.svg"
 										width=""
 										height=""
 										loading="lazy"
@@ -245,7 +367,12 @@ export default function Home() {
 		<section className="verticle-tab-area">
 			<div className="page-container">
 				<div className="tab-block">
-					<div className="verticle-tab">
+					<div
+						className="verticle-tab"
+						data-aos="fade-right"
+						data-aos-delay="200"
+						data-aos-duration="1500"
+					>
 						<button
 							className="tablinks"
 							onclick="openCity(event, 'discovery-call')"
@@ -272,7 +399,12 @@ export default function Home() {
 							Execution
 						</button>
 					</div>
-					<div className="tabcontent-inner">
+					<div
+						className="tabcontent-inner"
+						data-aos="fade-left"
+						data-aos-delay="300"
+						data-aos-duration="1500"
+					>
 						<div id="discovery-call" className="tabcontent">
 							<p>
 								Neque porro quisquam est, qui dolorem ipsum quia
@@ -340,6 +472,447 @@ export default function Home() {
 				</div>
 			</div>
 		</section>
+
+		{/* <!-- Colleagues Section --> */}
+		<section className="colleagues-area">
+			<div className="page-container">
+				<div className="colleagues-block">
+					<header>
+						<h4
+							data-aos="fade-down"
+							data-aos-delay="200"
+							data-aos-duration="1500"
+						>
+							Meet our learned colleagues
+						</h4>
+						<a
+							data-aos="fade-down"
+							data-aos-delay="400"
+							data-aos-duration="1500"
+							>Learn more about us</a
+						>
+					</header>
+					<div className="row">
+						<div
+							className="col-4"
+							data-aos="zoom-in"
+							data-aos-delay="200"
+							data-aos-duration="1500"
+						>
+							<div className="colleagues-item">
+								<img
+									src="/images/albert-flores.png"
+									width="368"
+									height="451"
+									loading="lazy"
+									decoding="async"
+									alt=""
+								/>
+								<div className="colleagues-info">
+									<h6>Albert Flores</h6>
+									<p>Lawyer</p>
+								</div>
+							</div>
+						</div>
+						<div
+							className="col-4"
+							data-aos="zoom-in"
+							data-aos-delay="400"
+							data-aos-duration="1500"
+						>
+							<div className="colleagues-item">
+								<img
+									src="/images/ralph-edwards.png"
+									width="368"
+									height="451"
+									loading="lazy"
+									decoding="async"
+									alt=""
+								/>
+								<div className="colleagues-info">
+									<h6>Ralph Edwards</h6>
+									<p>Lawyer</p>
+								</div>
+							</div>
+						</div>
+						<div
+							className="col-4"
+							data-aos="zoom-in"
+							data-aos-delay="600"
+							data-aos-duration="1500"
+						>
+							<div className="colleagues-item">
+								<img
+									src="/images/courtney-henry.png"
+									width="368"
+									height="451"
+									loading="lazy"
+									decoding="async"
+									alt=""
+								/>
+								<div className="colleagues-info">
+									<h6>Courtney Henry</h6>
+									<p>Lawyer</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		{/* <!-- Evelution Section --> */}
+		<section className="evalution-area">
+			<div className="page-container">
+				<div className="row">
+					<div className="col-6">
+						<h4
+							data-aos="fade-right"
+							data-aos-delay="200"
+							data-aos-duration="1500"
+						>
+							You can get case evaluation from us
+						</h4>
+					</div>
+					<div className="col-6">
+						<div className="evalution-info">
+							<div
+								className="evalution-item"
+								data-aos="fade-left"
+								data-aos-delay="200"
+								data-aos-duration="1500"
+							>
+								<div className="icon-box">
+									<img
+										src="/images/phone.svg"
+										loading="lazy"
+										decoding="async"
+										alt=""
+									/>
+								</div>
+								<div className="content-box">
+									<span>Call us on</span>
+									<a href="tel:(209) 555-0104"
+										>(209) 555-0104</a
+									>
+								</div>
+							</div>
+							<div
+								className="evalution-item"
+								data-aos="fade-left"
+								data-aos-delay="400"
+								data-aos-duration="1500"
+							>
+								<div className="icon-box">
+									<img
+										src="/images/location.svg"
+										loading="lazy"
+										decoding="async"
+										alt=""
+									/>
+								</div>
+								<div className="content-box">
+									<span>Locate us at</span>
+									<p>
+										8502 Preston Rd. Inglewood, Maine 98380
+									</p>
+								</div>
+							</div>
+							<div
+								className="evalution-item"
+								data-aos="fade-left"
+								data-aos-delay="600"
+								data-aos-duration="1500"
+							>
+								<div className="icon-box">
+									<img
+										src="/images/email.svg"
+										loading="lazy"
+										decoding="async"
+										alt=""
+									/>
+								</div>
+								<div className="content-box">
+									<span>Mail us on</span>
+									<a href="mailto:sara.cruz@example.com4"
+										>sara.cruz@example.com</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		{/* <!-- Posts Section --> */}
+		<section className="post-area">
+			<div className="page-container">
+				<div className="post-block">
+					<header>
+						<h4
+							data-aos="fade-down"
+							data-aos-delay="200"
+							data-aos-duration="1500"
+						>
+							Our Posts
+						</h4>
+						<a
+							data-aos="fade-down"
+							data-aos-delay="400"
+							data-aos-duration="1500"
+							>Read more posts</a
+						>
+					</header>
+					<div className="row">
+						<div className="col-6">
+							<div
+								className="post-left-photo"
+								data-aos="fade-right"
+								data-aos-delay="200"
+								data-aos-duration="1500"
+							>
+								<img
+									src="/images/post-one.jpg"
+									loading="lazy"
+									decoding="async"
+									alt=""
+								/>
+								<div className="post-left-content">
+									<span>BUSINESS</span>
+									<p>
+										How to own a Copyright for your product
+									</p>
+									<h6>12/10/2023</h6>
+								</div>
+							</div>
+						</div>
+						<div className="col-3">
+							<div
+								className="post-right-wrapper"
+								data-aos="fade-left"
+								data-aos-delay="400"
+								data-aos-duration="1500"
+							>
+								<div className="post-right-photo">
+									<img
+										src="/images/post-two.jpg"
+										loading="lazy"
+										decoding="async"
+										alt=""
+									/>
+								</div>
+								<div className="post-right-content">
+									<span>PERSONAL AFFAIRS</span>
+									<p>Choosing Next of Kin</p>
+									<h6>12/10/2023</h6>
+								</div>
+							</div>
+						</div>
+						<div className="col-3">
+							<div
+								className="post-right-wrapper"
+								data-aos="fade-left"
+								data-aos-delay="600"
+								data-aos-duration="1500"
+							>
+								<div className="post-right-photo">
+									<img
+										src="/images/post-three.jpg"
+										loading="lazy"
+										decoding="async"
+										alt=""
+									/>
+								</div>
+								<div className="post-right-content">
+									<span>BUSINESS</span>
+									<p>
+										How to own a Copyright for your product
+									</p>
+									<h6>12/10/2023</h6>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		{/* <!-- Testimonial Section --> */}
+		<div className="testimonial-area">
+			<div className="page-container">
+				<div className="row">
+					<div className="col-6">
+						<h3
+							data-aos="fade-right"
+							data-aos-delay="200"
+							data-aos-duration="1500"
+						>
+							What out clients say <span>about us</span>
+						</h3>
+					</div>
+					<div className="col-6">
+						<div
+							className="author-block"
+							data-aos="fade-left"
+							data-aos-delay="300"
+							data-aos-duration="1500"
+						>
+							<div className="author-photo">
+								<img src="/images/testimonial.png" alt="" />
+							</div>
+							<div className="author-info">
+								<h5>Brooklyn Simmons</h5>
+								<h6>President of Sales</h6>
+							</div>
+							<div className="author-content">
+								<p>
+									“Amet minim mollit non deserunt ullamco est
+									sit aliqua dolor do amet sint. Velit officia
+									consequat duis enim velit mollit.
+									Exercitation veniam consequat.”
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		{/* <!-- Testimonial Section --> */}
+		<div className="eveluation-form-area">
+			<div className="page-container">
+				<div className="row">
+					<div className="col-6">
+						<div
+							className="evaluation-form-box"
+							data-aos="fade-right"
+							data-aos-delay="200"
+							data-aos-duration="1500"
+						>
+							<h3>Get free evaluation</h3>
+							<form>
+								<div className="form-group">
+									<input
+										type="text"
+										className="inputs"
+										placeholder="Your full name"
+									/>
+								</div>
+								<div className="form-group">
+									<input
+										type="text"
+										className="inputs"
+										placeholder="Phone"
+									/>
+								</div>
+								<div className="form-group">
+									<input
+										type="email"
+										className="inputs"
+										placeholder="Your email"
+									/>
+								</div>
+								<div className="form-group">
+									<textarea
+										className="inputs"
+										placeholder="Briefly describe.."
+									></textarea>
+								</div>
+								<button type="submit" className="btn-submit">
+									Send message
+								</button>
+							</form>
+						</div>
+					</div>
+					<div className="col-6">
+						<h4
+							data-aos="fade-left"
+							data-aos-delay="300"
+							data-aos-duration="1500"
+						>
+							Our Professional Expert Law Team Is Always Ready To
+							Serve You
+						</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer className="footer">
+			<div className="page-container">
+				<a className="footer-logo">
+					<img
+						src="/images/Logo.png"
+						width=""
+						height=""
+						loading="lazy"
+						decoding="async"
+						alt="Logo"
+					/>
+				</a>
+				<div className="footer-menu">
+					<a>Teams</a>
+					<a>Privacy Policy</a>
+					<a>Contact</a>
+					<a>Services</a>
+					<a>About</a>
+					<a>Blog</a>
+				</div>
+				<div className="footer-social-media">
+					<a>
+						<div className="icon-box">
+							<img src="/images/icons/ftr-linkedin.svg" alt="" />
+						</div>
+						<p>linkedin</p>
+						<img
+							src="/images/right-arrow.svg"
+							className="arrow-right"
+							alt=""
+						/>
+					</a>
+					<a>
+						<div className="icon-box">
+							<img
+								src="/images/icons/ftr-instagram.svg"
+								alt=""
+							/>
+						</div>
+						<p>instagram</p>
+						<img
+							src="/images/right-arrow.svg"
+							className="arrow-right"
+							alt=""
+						/>
+					</a>
+					<a>
+						<div className="icon-box">
+							<img src="/images/icons/ftr-facebook.svg" alt="" />
+						</div>
+						<p>facebook</p>
+						<img
+							src="/images/right-arrow.svg"
+							className="arrow-right"
+							alt=""
+						/>
+					</a>
+					<a>
+						<div className="icon-box">
+							<img src="/images/icons/ftr-twitter.svg" alt="" />
+						</div>
+						<p>twitter x</p>
+						<img
+							src="/images/right-arrow.svg"
+							className="arrow-right"
+							alt=""
+						/>
+					</a>
+				</div>
+				<p className="tagline">
+					Template Designed by <span>Apperr Designs</span>
+				</p>
+			</div>
+		</footer>
     </React.Fragment>
   );
 }
