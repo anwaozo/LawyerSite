@@ -16,17 +16,23 @@ Menu:
   HeaderMenu:
     - linkLabel: About Us
       link Path: /about-us
+      linkPath: /about-us
     - linkLabel: Contact Us
       link Path: /contact-us
+      linkPath: /contact-us
     - linkLabel: Blog
       link Path: /blog
+      linkPath: /blog
     - linkLabel: Services
       link Path: /services
+      linkPath: /services
     - linkLabel: Team
       link Path: /team
+      linkPath: /team
   FooterMenu:
     - linkLabel: Test
       link Path: /test
+      linkPath: /test
 MetaTags:
   metatitle: Test Meta Tag
   metaDescription: Test meta description

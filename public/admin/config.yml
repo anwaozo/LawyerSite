@@ -33,14 +33,14 @@ collections:
                 widget: "list"
                 fields:
                   - { label: "Link Label", name: "linkLabel", widget: "string" }
-                  - { label: "Link Path", name: "link Path", widget: "string" }
+                  - { label: "Link Path", name: "linkPath", widget: "string" }
 
               - name: "FooterMenu"
                 label: "Footer Menu"
                 widget: "list"
                 fields:
                   - { label: "Link Label", name: "linkLabel", widget: "string" }
-                  - { label: "Link Path", name: "link Path", widget: "string" }
+                  - { label: "Link Path", name: "linkPath", widget: "string" }
 
           - name: "MetaTags"
             label: "Meta Tags"
