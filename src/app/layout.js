@@ -2,6 +2,10 @@
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+// import "./page.module.css"
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,6 +15,9 @@ const inter = Inter({ subsets: ["latin"] });
 // };
 
 export default function RootLayout({ children }) {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <html lang="en">
       <head>
@@ -21,11 +28,10 @@ export default function RootLayout({ children }) {
 			href="https://unpkg.com/aos@2.3.1/dist/aos.css"
 			rel="stylesheet"
 		/> */}
-		{/* <link rel="stylesheet" type="text/css" href="css/custom.css" /> */}
-
+        {/* <link rel="stylesheet" type="text/css" href="css/custom.css" /> */}
+        <script>AOS.init();</script>
         {/* <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> */}
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-        {/* <script src="../../public/js/jquery.slim.min.js"></script> */}
       </head>
       <body>{children}</body>
     </html>

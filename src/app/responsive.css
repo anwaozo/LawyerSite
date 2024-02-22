@@ -1,0 +1,462 @@
+/* Responsive Styles */
+
+@media only screen and(max-width:1199px) {
+}
+
+@media only screen and (max-width: 991px) {
+	.home-social-media {
+		margin-right: 30px;
+	}
+	.home-banner-area {
+		padding-top: 45px;
+	}
+	.about-area {
+		padding: 85px 0px 100px 0px;
+	}
+	.legal-practice-block {
+		padding: 60px 40px 6px 40px;
+	}
+	.legal-item {
+		min-height: 204px;
+		margin-bottom: 35px;
+	}
+	.legal-item p {
+		font-size: 22px;
+	}
+	.legal-practice-block header h4,
+	.colleagues-block header h4,
+	.post-block header h4 {
+		font-size: 36px;
+		line-height: 44px;
+	}
+	.legal-practice-area {
+		padding-bottom: 70px;
+	}
+	.verticle-tab button {
+		font-size: 30px;
+		margin-bottom: 25px;
+	}
+	.verticle-tab-area {
+		padding-bottom: 50px;
+	}
+	.colleagues-block .row {
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+	.colleagues-block .col-4 {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.colleagues-item {
+		height: 355px;
+	}
+	.colleagues-item .colleagues-info {
+		padding: 0px 10px 0px 10px;
+		height: 85px;
+	}
+	.colleagues-info h6 {
+		font-size: 20px;
+		line-height: 26px;
+		margin-bottom: 4px;
+	}
+	.evalution-area h4 {
+		font-size: 38px;
+		line-height: 50px;
+	}
+	.evalution-item .icon-box {
+		width: 70px;
+		height: 70px;
+	}
+	.content-box a {
+		font-size: 24px;
+		line-height: 30px;
+	}
+	.content-box p {
+		font-size: 24px;
+		line-height: 32px;
+	}
+	.post-area {
+		padding-top: 60px;
+	}
+	.post-block .col-6 {
+		width: 100%;
+		padding-bottom: 28px;
+	}
+	.post-block .col-3 {
+		width: 50%;
+	}
+	.testimonial-area h3,
+	.eveluation-form-area h4 {
+		font-size: 38px;
+		line-height: 50px;
+	}
+	.testimonial-area h3 span {
+		display: inline-block;
+	}
+	.eveluation-form-area {
+		padding-top: 65px;
+	}
+	.evaluation-form-box {
+		padding: 30px 30px 40px;
+	}
+
+	.footer-menu a:not(:last-child) {
+		padding-right: 50px;
+	}
+	.footer-social-media {
+		flex-wrap: wrap;
+	}
+	.footer-social-media a {
+		width: 40%;
+		margin: 5px;
+	}
+	.footer-social-media a:not(:last-of-type) {
+		margin-right: 3px;
+	}
+	.about-content-block h4 {
+		font-size: 42px;
+		line-height: 52px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.home-banner-area {
+		padding-top: 30px;
+	}
+	.banner-content h1 {
+		font-size: 46px;
+	}
+	.home-banner-photo {
+		height: 330px;
+		padding-top: 60px;
+	}
+	.banner-content h2 {
+		font-size: 50px;
+		line-height: 52px;
+		margin-top: -15px;
+	}
+	.banner-content p {
+		margin-top: 20px;
+		margin-bottom: 32px;
+	}
+	.about-content-block h4 {
+		font-size: 34px;
+		line-height: 42px;
+	}
+	.about-content-block {
+		padding-right: 0px;
+	}
+	.about-area {
+		padding: 70px 0px 85px 0px;
+	}
+	.legal-practice-block {
+		padding: 45px 30px 6px 30px;
+	}
+	.legal-practice-block header h4,
+	.colleagues-block header h4,
+	.post-block header h4 {
+		font-size: 32px;
+		line-height: 40px;
+	}
+	.legal-practice-block header,
+	.colleagues-block header {
+		display: block;
+		padding-bottom: 40px;
+		text-align: center;
+	}
+	.legal-item .legal-icon {
+		min-height: 70px;
+		width: 60px;
+		margin: 0 auto;
+	}
+	.legal-item .legal-icon img {
+		width: 100%;
+	}
+	.legal-item p {
+		font-size: 20px;
+		word-break: break-word;
+	}
+	.legal-item {
+		min-height: 195px;
+		margin-bottom: 25px;
+	}
+	.verticle-tab button {
+		font-size: 25px;
+		margin-bottom: 20px;
+	}
+	.tabcontent-inner {
+		padding: 0px 12px 0px 45px;
+	}
+	.legal-practice-area {
+		padding-bottom: 60px;
+	}
+	.colleagues-area {
+		padding-top: 46px;
+		padding-bottom: 50px;
+	}
+	.colleagues-info h6 {
+		font-size: 17px;
+		line-height: 22px;
+	}
+	.colleagues-item .colleagues-info {
+		height: 90px;
+	}
+	.evalution-area {
+		padding: 45px 0px 25px;
+	}
+	.evalution-area .col-6 {
+		width: 100%;
+	}
+	.evalution-area h4 {
+		font-size: 34px;
+		line-height: 42px;
+		text-align: center;
+		margin-bottom: 25px;
+	}
+	.evalution-item .icon-box {
+		width: 55px;
+		height: 55px;
+	}
+	.evalution-item .icon-box img {
+		width: 25px;
+	}
+	.content-box a,
+	.content-box p {
+		font-size: 22px;
+		line-height: 28px;
+	}
+	.post-area {
+		padding-top: 45px;
+		padding-bottom: 55px;
+	}
+	.post-block header {
+		display: block;
+		padding-bottom: 40px;
+		text-align: center;
+	}
+	.post-right-photo {
+		height: 190px;
+	}
+	.testimonial-area h3,
+	.eveluation-form-area h4 {
+		font-size: 30px;
+		line-height: 40px;
+	}
+	.author-info {
+		width: calc(100% - 80px);
+	}
+	.eveluation-form-area {
+		padding-top: 50px;
+	}
+	.eveluation-form-area .col-6 {
+		width: 100%;
+	}
+	.evaluation-form-box {
+		margin-right: 0;
+		margin-bottom: 35px;
+	}
+	.testimonial-area {
+		padding: 55px 0px 0px;
+	}
+	.footer {
+		padding-top: 65px;
+	}
+	.footer-menu a:not(:last-child) {
+		padding-right: 30px;
+	}
+	.footer-social-media a {
+		width: 48%;
+	}
+	.tagline {
+		margin-top: 40px;
+	}
+}
+
+@media only screen and (max-width: 540px) {
+	.footer-social-media a {
+		width: 65%;
+	}
+	.testimonial-area .col-6 {
+		width: 100%;
+	}
+	.testimonial-area h3 {
+		padding-bottom: 35px;
+		text-align: center;
+	}
+	.colleagues-block .col-4 {
+		width: 100%;
+	}
+	.colleagues-item {
+		height: 325px;
+		margin-bottom: 20px;
+	}
+	.colleagues-item img {
+		object-position: top;
+	}
+	.colleagues-area {
+		padding-top: 40px;
+		padding-bottom: 35px;
+	}
+	.legal-practice-block .col-4 {
+		width: 50%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.banner-content h2 {
+		font-size: 40px;
+		line-height: 46px;
+		margin-top: -10px;
+	}
+	.banner-content p {
+		font-size: 16px;
+	}
+	.home-banner-photo {
+		height: 250px;
+		padding-top: 50px;
+	}
+	.about-area {
+		padding: 55px 0px 65px 0px;
+	}
+	.about-area .col-6 {
+		width: 100%;
+	}
+	.about-content-block {
+		text-align: center;
+		padding-bottom: 35px;
+	}
+	.about-content-block p {
+		margin-bottom: 30px;
+	}
+	.about-content-block a {
+		margin: 0 auto;
+	}
+	.about-content-block h4 {
+		font-size: 30px;
+		line-height: 40px;
+	}
+}
+
+@media only screen and (max-width: 420px) {
+	.about-area {
+		padding: 45px 0px 60px 0px;
+	}
+	.about-content-block h4 {
+		font-size: 28px;
+		line-height: 40px;
+	}
+	.legal-practice-block {
+		padding: 40px 30px 6px 30px;
+	}
+	.legal-practice-block header h4,
+	.colleagues-block header h4,
+	.post-block header h4 {
+		font-size: 28px;
+		line-height: 34px;
+	}
+	.legal-practice-block header,
+	.colleagues-block header {
+		display: block;
+		padding-bottom: 35px;
+		text-align: center;
+	}
+	.about-content-block .btn {
+		height: 40px;
+	}
+	.legal-item p {
+		font-size: 18px;
+		padding-top: 10px;
+	}
+	.legal-item {
+		min-height: 178px;
+		margin-bottom: 15px;
+		padding: 18px 8px 18px 8px;
+	}
+	.tab-block {
+		display: block;
+	}
+	.verticle-tab,
+	.tabcontent-inner {
+		width: 100%;
+	}
+	.verticle-tab button {
+		text-align: center;
+		font-size: 22px;
+		margin-bottom: 15px;
+	}
+	.tabcontent-inner {
+		padding: 0;
+		text-align: center;
+	}
+	.home-banner-area {
+		padding-top: 22px;
+	}
+	.evalution-area {
+		padding: 40px 0px 25px;
+	}
+	.evalution-area h4 {
+		font-size: 28px;
+		line-height: 36px;
+	}
+	.content-box a,
+	.content-box p {
+		font-size: 20px;
+		line-height: 24px;
+	}
+	.evalution-item .icon-box {
+		width: 48px;
+		height: 48px;
+		margin-right: 20px;
+	}
+	.evalution-item .icon-box img {
+		width: 20px;
+	}
+	.post-area {
+		padding-top: 40px;
+		padding-bottom: 22px;
+	}
+	.post-block header {
+		padding-bottom: 35px;
+	}
+	.post-block .col-3 {
+		width: 100%;
+	}
+	.post-right-photo {
+		height: 215px;
+	}
+	.post-right-wrapper {
+		margin-bottom: 28px;
+	}
+	.testimonial-area {
+		padding: 45px 0px 0px;
+	}
+	.evaluation-form-box h3 {
+		font-size: 28px;
+		margin-bottom: 20px;
+	}
+	.testimonial-area h3,
+	.eveluation-form-area h4 {
+		font-size: 28px;
+		line-height: 34px;
+	}
+	.footer {
+		padding-top: 45px;
+	}
+	.footer-menu {
+		display: block;
+		margin-bottom: 35px;
+		text-align: center;
+	}
+	.footer-menu a:not(:last-child) {
+		padding-right: 20px;
+	}
+	.footer-social-media a p {
+		font-size: 13px;
+	}
+	.banner-content a {
+		height: 42px;
+	}
+}
+
+@media only screen and(max-width:360px) {
+}
