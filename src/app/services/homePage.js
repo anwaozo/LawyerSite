@@ -3,6 +3,12 @@ import {
   react as HomeContent,
 } from "../../../content/pages/home.md";
 
-export const { headerInfo, footerInfo, heroSection } = attributes;
+export const {
+  headerInfo,
+  footerInfo,
+  heroSection,
+  legalTeamSection,
+  legalPracticesSection,
+} = attributes;
 
 export default attributes;

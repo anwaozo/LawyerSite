@@ -1,10 +1,13 @@
 "use client";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
-import React from "react";
+import { useRouter, usePathname } from "next/navigation";
+import React, { useEffect } from "react";
+import { headerInfo } from "../services/homePage";
 
 export default function HeaderComponent() {
   const router = useRouter();
+  const currentPath = usePathname();
+  const { logo, menu } = headerInfo;
   return (
     <React.Fragment>
       <header className="header">
@@ -17,7 +20,7 @@ export default function HeaderComponent() {
               }}
             >
               <img
-                src="/images/Logo.png"
+                src={logo}
                 width=""
                 height=""
                 loading="lazy"
@@ -27,33 +30,22 @@ export default function HeaderComponent() {
             </a>
             <nav>
               <ul>
-                <li className="clickable">
-                  <a>about us</a>
-                </li>
-                <li className="active">
-                  <a
-                    onClick={() => {
-                      router.push("/contact-us");
-                    }}
+                {menu?.map((item) => (
+                  <li
+                    key={item?.linkLabel}
+                    className={`${
+                      currentPath === item?.linkPath ? "active" : "clickable"
+                    }`}
                   >
-                    contact us
-                  </a>
-                </li>
-                <li className="clickable">
-                  <a
-                    onClick={() => {
-                      router.push("/blog");
-                    }}
-                  >
-                    blog
-                  </a>
-                </li>
-                <li className="clickable">
-                  <a>services</a>
-                </li>
-                <li className="clickable">
-                  <a>team</a>
-                </li>
+                    <a
+                      onClick={() => {
+                        router.push(item?.linkPath);
+                      }}
+                    >
+                      {item?.linkLabel}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </nav>
           </div>
