@@ -1,17 +1,23 @@
+"use client";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
-import { headerInfo } from "../services/homePage";
 
 export default function HeaderComponent() {
-  const { logo: logoUrl, menu } = headerInfo;
+  const router = useRouter();
   return (
     <React.Fragment>
       <header className="header">
         <div className="page-container">
           <div className="header-block">
-            <a className="logo" href="#">
+            <a
+              className="logo clickable"
+              onClick={() => {
+                router.push("/");
+              }}
+            >
               <img
-                src={logoUrl}
+                src="/images/Logo.png"
                 width=""
                 height=""
                 loading="lazy"
@@ -21,11 +27,33 @@ export default function HeaderComponent() {
             </a>
             <nav>
               <ul>
-                {menu?.map((item) => (
-                  <li key={item?.linkLabel}>
-                    <a href="#">{item?.linkLabel}</a>
-                  </li>
-                ))}
+                <li className="clickable">
+                  <a>about us</a>
+                </li>
+                <li className="active">
+                  <a
+                    onClick={() => {
+                      router.push("/contact-us");
+                    }}
+                  >
+                    contact us
+                  </a>
+                </li>
+                <li className="clickable">
+                  <a
+                    onClick={() => {
+                      router.push("/blog");
+                    }}
+                  >
+                    blog
+                  </a>
+                </li>
+                <li className="clickable">
+                  <a>services</a>
+                </li>
+                <li className="clickable">
+                  <a>team</a>
+                </li>
               </ul>
             </nav>
           </div>
