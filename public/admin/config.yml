@@ -1,4 +1,4 @@
-# local_backend: true
+#local_backend: true
 backend:
   name: git-gateway
   repo: anwaozo/LawyerSite
@@ -17,34 +17,54 @@ collections:
         label: "HomePage"
         file: "content/pages/home.md"
         fields:
-          - name: "Logo"
-            label: "Logo"
+          - name: "headerInfo"
+            label: "Header Info"
             widget: "object"
             fields:
-              - { label: "Header Logo", name: "icon", widget: "image" }
-              - { label: "Footer Logo", name: "footerIcon", widget: "image" }
-
-          - name: "Menu"
-            label: "Menu"
-            widget: "object"
-            fields:
-              - name: "HeaderMenu"
-                label: "Header Menu"
+              - { label: "Logo", name: "logo", widget: "image" }
+              - name: "menu"
+                label: "Menu"
                 widget: "list"
                 fields:
                   - { label: "Link Label", name: "linkLabel", widget: "string" }
                   - { label: "Link Path", name: "linkPath", widget: "string" }
-
-              - name: "FooterMenu"
-                label: "Footer Menu"
+          - name: "footerInfo"
+            label: "Footer Info"
+            widget: "object"
+            fields:
+              - { label: "Logo", name: "logo", widget: "image" }
+              - name: "copyright"
+                label: "Copyright"
+                widget: "object"
+                fields:
+                  - {
+                      label: "Copyright Text1",
+                      name: "copyright1",
+                      widget: "string",
+                    }
+                  - {
+                      label: "Copyright Text2",
+                      name: "copyright2",
+                      widget: "string",
+                    }
+              - name: "quickMenu"
+                label: "Quick Menu"
                 widget: "list"
                 fields:
                   - { label: "Link Label", name: "linkLabel", widget: "string" }
                   - { label: "Link Path", name: "linkPath", widget: "string" }
+              - name: "socialMenu"
+                label: "Social Menu"
+                widget: "list"
+                fields:
+                  - { label: "Link Label", name: "linkLabel", widget: "string" }
+                  - { label: "Link Path", name: "linkPath", widget: "string" }
+                  - { label: "Link Icon", name: "linkIcon", widget: "image" }
 
-          - name: "MetaTags"
+          - name: "metaTags"
             label: "Meta Tags"
             widget: "object"
+            required: false
             fields:
               - { label: "Meta Title", name: "metatitle", widget: "string" }
               - {
@@ -53,93 +73,304 @@ collections:
                   widget: "string",
                 }
 
-          - name: "HeroSection"
+          - name: "heroSection"
             label: "Hero Section"
             widget: "object"
             fields:
-              - { label: "Hero Image", name: "HeroImage", widget: "image" }
+              - { label: "Hero Image", name: "heroImage", widget: "image" }
               - {
                   label: "Styled Heading",
-                  name: "StyledHeading",
+                  name: "styledHeading",
                   widget: "string",
                 }
-              - { label: "Heading", name: "Heading", widget: "string" }
-              - { label: "Description", name: "Description", widget: "string" }
-              - name: "SectionLink"
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Description", name: "description", widget: "string" }
+              - name: "sectionLink"
                 label: "Section Link"
                 widget: "object"
                 fields:
-                  - { label: "Link Label", name: "LinkLabel", widget: "string" }
-                  - { label: "Link Path", name: "LinkPath", widget: "string" }
-              - name: "SocialMediaIcons"
+                  - { label: "Link Label", name: "linkLabel", widget: "string" }
+                  - { label: "Link Path", name: "linkPath", widget: "string" }
+              - name: "socialMediaIcons"
                 label: "Social Media Icons"
                 widget: "list"
                 fields:
-                  - { label: "Icon", name: "Icon", widget: "image" }
-                  - { label: "Icon Path", name: "IconPath", widget: "string" }
+                  - { label: "Icon", name: "icon", widget: "image" }
+                  - { label: "Icon Path", name: "iconPath", widget: "string" }
 
-          - name: "LegalTeam"
+          - name: "legalTeamSection"
             label: "Legal Team Section"
             widget: "object"
             fields:
-              - { label: "Section Title", name: "Heading", widget: "string" }
+              - { label: "Section Title", name: "title", widget: "string" }
               - {
-                  label: "Section subTitle",
+                  label: "Section SubTitle",
                   name: "subHeading",
                   widget: "text",
                 }
-              - name: "SectionLink"
+              - name: "sectionLink"
                 label: "Section Link"
                 widget: "object"
                 fields:
-                  - { label: "Link Label", name: "LinkLabel", widget: "string" }
-                  - { label: "Link Path", name: "LinkPath", widget: "string" }
-              - name: "SectionInfo"
+                  - { label: "Link Label", name: "linkLabel", widget: "string" }
+                  - { label: "Link Path", name: "linkPath", widget: "string" }
+              - name: "sectionInfo"
                 label: "Section Info"
                 widget: "list"
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
                   - {
                       label: "Displayed Number",
-                      name: "DisplayedNumber",
+                      name: "displayedNumber",
                       widget: "string",
                     }
 
-          - name: "LegalPractices"
+          - name: "legalPracticesSection"
             label: "Legal Practices Section"
             widget: "object"
             fields:
-              - { label: "Section Title", name: "Heading", widget: "string" }
+              - { label: "Section Title", name: "title", widget: "string" }
+              - {
+                  label: "Section subTitle",
+                  name: "subHeading",
+                  widget: "text",
+                  required: false,
+                }
+              - {
+                  label: "Section Image",
+                  name: "sectionImage",
+                  widget: "image",
+                }
+              - name: "sectionLink"
+                label: "Section Link"
+                widget: "object"
+                fields:
+                  - { label: "Link Label", name: "linkLabel", widget: "string" }
+                  - { label: "Link Path", name: "linkPath", widget: "string" }
+              - name: "sectionInfo"
+                label: "Section Info"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Path", name: "path", widget: "string" }
+                  - { label: "Icon", name: "icon", widget: "image" }
+
+          - name: "bussinessInformationSection"
+            label: "Bussiness Information Section"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Content", name: "content", widget: "string" }
+
+          - name: "collegueSection"
+            label: "Collegue Section"
+            widget: "object"
+            fields:
+              - { label: "Section Title", name: "title", widget: "string" }
+              - {
+                  label: "Section subTitle",
+                  name: "subHeading",
+                  widget: "text",
+                  required: false,
+                }
+              - name: "sectionLink"
+                label: "Section Link"
+                widget: "object"
+                fields:
+                  - { label: "Link Label", name: "linkLabel", widget: "string" }
+                  - { label: "Link Path", name: "linkPath", widget: "string" }
+              - name: "collegueInfo"
+                label: "Collegue Info"
+                widget: "list"
+                fields:
+                  - {
+                      label: "Collegue Name",
+                      name: "collegueName",
+                      widget: "string",
+                    }
+                  - {
+                      label: "Occupation",
+                      name: "occupation",
+                      widget: "string",
+                    }
+                  - { label: "Image", name: "image", widget: "image" }
+
+          - name: "contactUsSection"
+            label: "Contact Us Section"
+            widget: "object"
+            fields:
+              - { label: "Section Title", name: "title", widget: "string" }
+              - {
+                  label: "Section subTitle",
+                  name: "subHeading",
+                  widget: "text",
+                  required: false,
+                }
+              - name: "contactInfo"
+                label: "Contact Info"
+                widget: "object"
+                fields:
+                  - name: "phoneDetail"
+                    label: "Phone Detail"
+                    widget: "object"
+                    fields:
+                      - { label: "Title", name: "title", widget: "string" }
+                      - {
+                          label: "Phone number",
+                          name: "phoneNumber",
+                          widget: "string",
+                        }
+                      - { label: "Icon", name: "icon", widget: "image" }
+                  - name: "address"
+                    label: "Address Detail"
+                    widget: "object"
+                    fields:
+                      - { label: "Title", name: "title", widget: "string" }
+                      - { label: "Address", name: "address", widget: "string" }
+                      - { label: "Icon", name: "icon", widget: "image" }
+                  - name: "emailDetail"
+                    label: "Email Detail"
+                    widget: "object"
+                    fields:
+                      - { label: "Title", name: "title", widget: "string" }
+                      - { label: "Email", name: "email", widget: "string" }
+                      - { label: "Icon", name: "icon", widget: "image" }
+          - name: "ourPostsSection"
+            label: "Our Posts Section"
+            widget: "object"
+            fields:
+              - { label: "Section Title", name: "title", widget: "string" }
+              - {
+                  label: "Section subTitle",
+                  name: "subHeading",
+                  widget: "text",
+                  required: false,
+                }
+              - name: "sectionLink"
+                label: "Section Link"
+                widget: "object"
+                fields:
+                  - { label: "Link Label", name: "linkLabel", widget: "string" }
+                  - { label: "Link Path", name: "linkPath", widget: "string" }
+              - name: "posts"
+                label: "Posts Detail"
+                widget: "list"
+                fields:
+                  - { label: "Post Type", name: "postType", widget: "string" }
+                  - { label: "Post Title", name: "postTitle", widget: "string" }
+                  - {
+                      label: "Creation Date",
+                      name: "creationDate",
+                      widget: "datetime",
+                    }
+                  - { label: "Image", name: "image", widget: "image" }
+          - name: "clientTestimonialSection"
+            label: "Client Testimonial Section"
+            widget: "object"
+            fields:
+              - { label: "Section Title", name: "title", widget: "string" }
+              - {
+                  label: "Section subTitle",
+                  name: "subHeading",
+                  widget: "text",
+                  required: false,
+                }
+              - name: "clientTestimonial"
+                label: "Client Testimonial"
+                widget: "list"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - {
+                      label: "Designation",
+                      name: "designation",
+                      widget: "string",
+                    }
+                  - {
+                      label: "Testimonial",
+                      name: "testimonial",
+                      widget: "string",
+                    }
+                  - { label: "Image", name: "image", widget: "image" }
+          - name: "evaluationSection"
+            label: "Evaluation Section"
+            widget: "object"
+            fields:
+              - { label: "Section Title", name: "title", widget: "string" }
               - {
                   label: "Section subTitle",
                   name: "subHeading",
                   widget: "text",
                 }
-              - {
-                  label: "Section Image",
-                  name: "SectionImage",
-                  widget: "image",
-                }
-              - name: "SectionLink"
-                label: "Section Link"
+              - name: "evaluationForm"
+                label: "Evaluation Form"
                 widget: "object"
                 fields:
-                  - { label: "Link Label", name: "LinkLabel", widget: "string" }
-                  - { label: "Link Path", name: "LinkPath", widget: "string" }
-              - name: "SectionInfo"
-                label: "Section Info"
-                widget: "list"
-                fields:
                   - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Path", name: "Path", widget: "string" }
-                  - { label: "Icon", name: "Icon", widget: "image" }
-
-          - name: "BussinessInformation"
-            label: "Bussiness Information Section"
-            widget: "list"
-            fields:
-              - { label: "Title", name: "Title", widget: "string" }
-              - { label: "Content", name: "Content", widget: "string" }
+                  - name: "fullName"
+                    label: "Fullname field"
+                    widget: "object"
+                    fields:
+                      - {
+                          label: "Placeholder Text",
+                          name: "placeholderText",
+                          widget: "string",
+                        }
+                      - {
+                          label: "fieldIcon",
+                          name: "fieldIcon",
+                          widget: "image",
+                          required: false,
+                        }
+                  - name: "phone"
+                    label: "Phone field"
+                    widget: "object"
+                    fields:
+                      - {
+                          label: "Placeholder Text",
+                          name: "placeholderText",
+                          widget: "string",
+                        }
+                      - {
+                          label: "fieldIcon",
+                          name: "fieldIcon",
+                          widget: "image",
+                          required: false,
+                        }
+                  - name: "email"
+                    label: "Email field"
+                    widget: "object"
+                    fields:
+                      - {
+                          label: "Placeholder Text",
+                          name: "placeholderText",
+                          widget: "string",
+                        }
+                      - {
+                          label: "fieldIcon",
+                          name: "fieldIcon",
+                          widget: "image",
+                          required: false,
+                        }
+                  - name: "description"
+                    label: "Description field"
+                    widget: "object"
+                    fields:
+                      - {
+                          label: "Placeholder Text",
+                          name: "placeholderText",
+                          widget: "string",
+                        }
+                      - {
+                          label: "fieldIcon",
+                          name: "fieldIcon",
+                          widget: "image",
+                          required: false,
+                        }
+                  - {
+                      label: "Button Label",
+                      name: "buttonText",
+                      widget: "string",
+                    }
 
       - label: "About"
         name: "about"

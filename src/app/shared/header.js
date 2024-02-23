@@ -1,7 +1,9 @@
 import Image from "next/image";
 import React from "react";
+import { headerInfo } from "../services/homePage";
 
 export default function HeaderComponent() {
+  const { logo: logoUrl, menu } = headerInfo;
   return (
     <React.Fragment>
       <header className="header">
@@ -9,7 +11,7 @@ export default function HeaderComponent() {
           <div className="header-block">
             <a className="logo" href="#">
               <img
-                src="/images/Logo.png"
+                src={logoUrl}
                 width=""
                 height=""
                 loading="lazy"
@@ -19,21 +21,11 @@ export default function HeaderComponent() {
             </a>
             <nav>
               <ul>
-                <li>
-                  <a href="#">about us</a>
-                </li>
-                <li>
-                  <a href="#">contact us</a>
-                </li>
-                <li>
-                  <a href="#">blog</a>
-                </li>
-                <li>
-                  <a href="#">services</a>
-                </li>
-                <li>
-                  <a href="#">team</a>
-                </li>
+                {menu?.map((item) => (
+                  <li key={item?.linkLabel}>
+                    <a href="#">{item?.linkLabel}</a>
+                  </li>
+                ))}
               </ul>
             </nav>
           </div>
