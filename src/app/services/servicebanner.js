@@ -6,7 +6,7 @@ export default function ServicebannerComponent() {
   return (
     <section class="inner-banner-area">
       <img
-        src="./images/service-banner.jpg"
+        src="/images/service-banner.jpg"
         width="1920"
         height="375"
         loading="lazy"
