@@ -1,7 +1,11 @@
 import Image from "next/image";
 import React from "react";
+import { legalPracticesSection } from "../../services/homePage";
 
 export default function Homelegalcomponent() {
+  console.log(legalPracticesSection);
+  const { title, sectionImage, sectionLink, sectionInfo } =
+    legalPracticesSection;
   return (
     <section className="legal-practice-area">
       <div className="page-container">
@@ -12,14 +16,14 @@ export default function Homelegalcomponent() {
               data-aos-delay="200"
               data-aos-duration="1500"
             >
-              Our Legal Practices
+              {title}
             </h4>
             <a
               data-aos="fade-down"
               data-aos-delay="400"
               data-aos-duration="1500"
             >
-              More practices
+              {sectionLink?.linkLabel}
             </a>
           </header>
           <div className="row">

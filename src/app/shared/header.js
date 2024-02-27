@@ -1,54 +1,56 @@
-"use client"
+"use client";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
-import React from "react";
+import { useRouter, usePathname } from "next/navigation";
+import React, { useEffect } from "react";
+import { headerInfo } from "../services/homePage";
 
 export default function HeaderComponent() {
-
-	const router = useRouter();
+  const router = useRouter();
+  const currentPath = usePathname();
+  const { logo, menu } = headerInfo;
   return (
     <React.Fragment>
       <header className="header">
-			<div className="page-container">
-				<div className="header-block">
-					<a className="logo clickable" onClick={()=>{
-									router.push("/")
-								}}>
-						<img
-							src="/images/Logo.png"
-							width=""
-							height=""
-							loading="lazy"
-							decoding="async"
-							alt="Logo"
-						/>
-					</a>
-					<nav>
-						<ul>
-							<li className="clickable">
-								<a >about us</a>
-							</li>
-							<li className="active">
-								<a onClick={()=>{
-									router.push("/contact-us")
-								}}>contact us</a>
-							</li>
-							<li className="clickable">
-								<a onClick={()=>{
-									router.push("/blog")
-								}}>blog</a>
-							</li>
-							<li className="clickable">
-								<a >services</a>
-							</li>
-							<li className="clickable">
-								<a >team</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</header>
+        <div className="page-container">
+          <div className="header-block">
+            <a
+              className="logo clickable"
+              onClick={() => {
+                router.push("/");
+              }}
+            >
+              <img
+                src={logo}
+                width=""
+                height=""
+                loading="lazy"
+                decoding="async"
+                alt="Logo"
+              />
+            </a>
+            <nav>
+              <ul>
+                {menu?.map((item) => (
+                  <li
+                    key={item?.linkLabel}
+                    className={`${
+                      currentPath === item?.linkPath ? "active" : "clickable"
+                    }`}
+                  >
+                    <a
+                      onClick={() => {
+                        router.push(item?.linkPath);
+                      }}
+                    >
+                      {item?.linkLabel}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
     </React.Fragment>
   );
 }
