@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
 import React, { useEffect } from "react";
-import { headerInfo } from "../services/homePage";
+import { headerInfo } from "../service-cms/homePage";
 
 export default function HeaderComponent() {
   const router = useRouter();

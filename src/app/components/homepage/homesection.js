@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { heroSection } from "../../services/homePage";
+import { heroSection } from "../../service-cms/homePage";
 
 export default function Homesectioncomponent() {
   console.log(heroSection);

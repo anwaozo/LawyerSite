@@ -1281,3 +1281,77 @@ img {
 .clickable{
 	cursor: pointer;
 }
+
+.service-feature {
+	padding-top: 64px;
+	padding-bottom: 24px;
+	background-color: var(--color-white);
+}
+.feature-wrap {
+	border: 1px solid var(--color-secondary);
+	padding: 20px 8px;
+	text-align: center;
+	height: calc(100% - 40px);
+	margin-bottom: 40px;
+	cursor: pointer;
+}
+.feature-wrap .feature-icon {
+	min-height: 91px;
+}
+.feature-wrap .feature-icon img {
+	transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+}
+.feature-wrap h4 {
+	font-family: 'Satoshi-Bold';
+	font-size: 24px;
+	line-height: 24px;
+	color: var(--color-secondary);
+	text-transform: uppercase;
+	padding-top: 20px;
+}
+.feature-wrap p {
+	font-family: 'Satoshi-Regular';
+	font-size: 24px;
+	line-height: 36px;
+	color: var(--color-secondary);
+	padding-top: 30px;
+}
+.feature-wrap:hover img {
+	transform: scale(1.2);
+}
+
+.inner-service-wrapper .eveluation-form-area {
+	padding-top: 60px;
+}
+.inner-service-wrapper .contact-info-area {
+	padding-top: 125px;
+	padding-bottom: 45px;
+}
+
+/************************** Service Details Section Styles ************************/
+.inner-service-details-wrapper .evaluation-form-box {
+	margin-right: 0px;
+}
+.form-content {
+	font-family: 'Satoshi-Regular';
+	font-size: 23px;
+	line-height: 36px;
+	color: var(--color-white-100);
+}
+.inner-service-details-wrapper .eveluation-form-area {
+	padding-bottom: 90px;
+}
+.inner-service-details-wrapper .service-feature h3 {
+	font-family: 'Satoshi-Bold';
+	font-size: 44px;
+	line-height: 48px;
+	color: var(--color-secondary);
+	padding-bottom: 35px;
+}
+.inner-service-details-wrapper .contact-info-area {
+	padding-bottom: 30px;
+}

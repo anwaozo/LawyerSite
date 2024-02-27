@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import dynamic from "next/dynamic";
-import { legalTeamSection } from "../../services/homePage";
+import { legalTeamSection } from "../../service-cms/homePage";
 
 export default function HomeaboutComponent() {
   console.log(legalTeamSection);

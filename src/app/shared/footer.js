@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { footerInfo } from "../services/homePage";
+import { footerInfo } from "../service-cms/homePage";
 
 export default function FooterComponent() {
   const { logo, copyright: copyrightText, quickMenu, socialMenu } = footerInfo;
