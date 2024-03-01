@@ -1,8 +1,11 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import dynamic from "next/dynamic";
+import { useRouter } from "next/navigation";
 
 export default function BlogpostComponent() {
+  const router = useRouter();
   return (
     <main className="inner-post-wrapper">
       <section className="post-area">
@@ -10,10 +13,13 @@ export default function BlogpostComponent() {
           <div className="row">
             <div className="col-4">
               <div
-                className="post-wrapper post-block"
+                className="post-wrapper post-block clickable"
                 data-aos="fade-right"
                 data-aos-delay="200"
                 data-aos-duration="1500"
+                onClick={() => {
+                  router.push("/blogdetails?blogid=1");
+                }}
               >
                 <div className="post-photo">
                   <img
@@ -36,6 +42,9 @@ export default function BlogpostComponent() {
                 data-aos="fade-right"
                 data-aos-delay="400"
                 data-aos-duration="1500"
+                onClick={() => {
+                  router.push("/blogdetails?blogid=2");
+                }}
               >
                 <div className="post-photo">
                   <img
@@ -58,6 +67,9 @@ export default function BlogpostComponent() {
                 data-aos="fade-right"
                 data-aos-delay="600"
                 data-aos-duration="1500"
+                onClick={() => {
+                  router.push("/blogdetails?blogid=3");
+                }}
               >
                 <div className="post-photo">
                   <img
@@ -80,6 +92,9 @@ export default function BlogpostComponent() {
                 data-aos="fade-right"
                 data-aos-delay="200"
                 data-aos-duration="1500"
+                onClick={() => {
+                  router.push("/blogdetails?blogid=4");
+                }}
               >
                 <div className="post-photo">
                   <img
@@ -102,6 +117,9 @@ export default function BlogpostComponent() {
                 data-aos="fade-right"
                 data-aos-delay="400"
                 data-aos-duration="1500"
+                onClick={() => {
+                  router.push("/blogdetails?blogid=5");
+                }}
               >
                 <div className="post-photo">
                   <img
@@ -124,6 +142,9 @@ export default function BlogpostComponent() {
                 data-aos="fade-right"
                 data-aos-delay="600"
                 data-aos-duration="1500"
+                onClick={() => {
+                  router.push("/blogdetails?blogid=6");
+                }}
               >
                 <div className="post-photo">
                   <img
@@ -146,6 +167,9 @@ export default function BlogpostComponent() {
                 data-aos="fade-right"
                 data-aos-delay="200"
                 data-aos-duration="1500"
+                onClick={() => {
+                  router.push("/blogdetails?blogid=7");
+                }}
               >
                 <div className="post-photo">
                   <img
@@ -168,6 +192,9 @@ export default function BlogpostComponent() {
                 data-aos="fade-right"
                 data-aos-delay="400"
                 data-aos-duration="1500"
+                onClick={() => {
+                  router.push("/blogdetails?blogid=8");
+                }}
               >
                 <div className="post-photo">
                   <img
@@ -190,6 +217,9 @@ export default function BlogpostComponent() {
                 data-aos="fade-right"
                 data-aos-delay="600"
                 data-aos-duration="1500"
+                onClick={() => {
+                  router.push("/blogdetails?blogid=9");
+                }}
               >
                 <div className="post-photo">
                   <img
