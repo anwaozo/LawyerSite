@@ -31,10 +31,10 @@ export default function Homecolleguecomponent() {
                 data-aos-duration="1500"
               >
                 <div className="colleagues-item">
-                  <img
+                  <Image
                     src="/images/albert-flores.png"
-                    width="368"
-                    height="451"
+                    width={368}
+                    height={451}
                     loading="lazy"
                     decoding="async"
                     alt=""
@@ -52,10 +52,10 @@ export default function Homecolleguecomponent() {
                 data-aos-duration="1500"
               >
                 <div className="colleagues-item">
-                  <img
+                  <Image
                     src="/images/ralph-edwards.png"
-                    width="368"
-                    height="451"
+                    width={368}
+                    height={451}
                     loading="lazy"
                     decoding="async"
                     alt=""
@@ -73,10 +73,10 @@ export default function Homecolleguecomponent() {
                 data-aos-duration="1500"
               >
                 <div className="colleagues-item">
-                  <img
+                  <Image
                     src="/images/courtney-henry.png"
-                    width="368"
-                    height="451"
+                    width={368}
+                    height={451}
                     loading="lazy"
                     decoding="async"
                     alt=""

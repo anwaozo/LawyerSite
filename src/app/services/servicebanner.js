@@ -5,10 +5,10 @@ import dynamic from "next/dynamic";
 export default function ServicebannerComponent() {
   return (
     <section class="inner-banner-area">
-      <img
+      <Image
         src="/images/service-banner.jpg"
-        width="1920"
-        height="375"
+        width={1920}
+        height={375}
         loading="lazy"
         decoding="async"
         alt=""

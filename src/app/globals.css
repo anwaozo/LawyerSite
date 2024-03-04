@@ -1355,3 +1355,295 @@ img {
 .inner-service-details-wrapper .contact-info-area {
 	padding-bottom: 30px;
 }
+.modal {
+	display: block;
+	position: fixed;
+	z-index: 1;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.9);
+}
+.modal-content {
+	background-color: #fff;
+	margin: auto;
+	height: calc(100vh - 130px);
+	max-width: 1200px;
+	width: 88%;
+	display: flex;
+	justify-content: center;
+	overflow-y: auto;
+	-webkit-box-shadow: 3px 3px 0px 0px #d19358;
+	-moz-box-shadow: 3px 3px 0px 0px #d19358;
+	box-shadow: 3px 3px 0px 0px #d19358;
+}
+.modal-content::-webkit-scrollbar {
+	width: 4px;
+	border-radius: 10px;
+}
+.modal-content::-webkit-scrollbar-track {
+	border-radius: 10px;
+}
+.modal-content::-webkit-scrollbar-thumb {
+	background: var(--color-secondary);
+}
+.modal-content figure,
+.modal-content .content-wrap {
+	width: 50%;
+}
+.modal-content figure img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: top;
+}
+.modal-content .content-wrap {
+	padding: 18px 24px;
+}
+.modal-content .content-wrap .post-name {
+	width: max-content;
+	padding: 6px 16px;
+	font-family: 'Satoshi-Regular';
+	font-size: 16px;
+	line-height: 24px;
+	color: var(--color-white);
+	text-transform: capitalize;
+	text-align: center;
+	background-color: var(--color-secondary);
+}
+.modal-content h5 {
+	font-family: 'Satoshi-Medium';
+	font-size: 24px;
+	line-height: 36px;
+	color: var(--color-secondary);
+	text-transform: capitalize;
+	margin: 16px 0;
+}
+.modal-content p {
+	font-family: 'Satoshi-Regular';
+	font-size: 18px;
+	line-height: 27px;
+	color: var(--color-secondary);
+	text-transform: capitalize;
+}
+.modal-content .content-wrap .Specialties {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin: 16px 0;
+}
+.modal-content .content-wrap .Specialties h6 {
+	font-family: 'Satoshi-Medium';
+	font-size: 16px;
+	line-height: 24px;
+	color: var(--color-secondary);
+	text-transform: capitalize;
+}
+.modal-content .content-wrap .Specialties .Specialties-item {
+	width: max-content;
+	padding: 11px 25px;
+	font-family: 'Satoshi-Medium';
+	font-size: 16px;
+	line-height: 24px;
+	color: var(--color-white);
+	text-transform: capitalize;
+	text-align: center;
+	background-color: var(--color-primary);
+}
+.modal-content .content-wrap .Specialties .Specialties-item:first-of-type {
+	margin: 0 24px;
+}
+.modal-content .content-wrap .social-box {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+.modal-content .content-wrap .social-box a.icon-box {
+	width: 86px;
+	height: 86px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 26px;
+	transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+}
+.modal-content .content-wrap .social-box a.icon-box:hover {
+	transform: scale(1.3);
+}
+.modal-content .content-wrap .social-box .icon-box:last-of-type {
+	margin-right: 0px;
+}
+.modal-content .content-wrap .social-box .icon-box img {
+	width: 26px;
+	height: 26px;
+}
+.modal-animate {
+	animation: modal-animation 1s;
+	-moz-animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes modal-animation {
+	0% {
+		opacity: 0;
+		transform: scale(0.75);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+@-moz-keyframes modal-animation {
+	0% {
+		opacity: 0;
+		transform: scale(0.75);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+@-o-keyframes modal-animation {
+	0% {
+		opacity: 0;
+		transform: scale(0.75);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+@keyframes modal-animation {
+	0% {
+		opacity: 0;
+		transform: scale(0.75);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+/*************** Not Found Styles ***********************/
+.not-found-block {
+	background-color: var(--color-primary);
+	padding: 55px 15px 45px;
+	-webkit-box-shadow: 5px 5px 0px 0px rgba(254, 254, 254, 1);
+	-moz-box-shadow: 5px 5px 0px 0px rgba(254, 254, 254, 1);
+	box-shadow: 5px 5px 0px 0px rgba(254, 254, 254, 1);
+	text-align: center;
+	margin: 50px 0px 20px;
+}
+.not-found-block h1 {
+	font-family: 'Satoshi-Bold';
+	font-size: 52px;
+	line-height: 1;
+	color: var(--color-secondary);
+	margin: 22px 0px;
+}
+.not-found-block h5 {
+	font-family: 'Satoshi-Regular';
+	font-size: 18px;
+	line-height: 1;
+	color: var(--color-secondary);
+	font-weight: 400;
+}
+.not-found-block h6 {
+	font-family: 'Satoshi-Regular';
+	font-size: 18px;
+	line-height: 1;
+	color: var(--color-secondary);
+	font-weight: 400;
+	text-transform: uppercase;
+	margin: 22px 0px 15px;
+}
+.not-found-menu ul {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.not-found-menu ul li:not(:last-of-type) {
+	margin-right: 28px;
+}
+.not-found-menu ul li a {
+	font-family: 'Satoshi-Regular';
+	font-size: 16px;
+	line-height: 1;
+	color: var(--color-secondary);
+	font-weight: 400;
+	text-transform: capitalize;
+	position: relative;
+}
+.not-found-menu ul li a:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 1px;
+	width: 100%;
+	background-color: var(--color-secondary);
+}
+
+/************ Pricing Styles ***************/
+.pricing-block {
+	background-color: var(--color-white);
+	padding-bottom: 65px;
+	margin-top: -145px;
+}
+.pricing-item {
+	background-color: var(--color-white);
+	border-right: 3px solid var(--color-primary);
+	border-bottom: 3px solid var(--color-primary);
+	padding: 32px 22px 32px 22px;
+	min-height: 390px;
+}
+.pricing-content {
+	border-top: 1px solid var(--color-gray);
+	padding-top: 28px;
+}
+.pricing-content h5 {
+	font-family: 'Satoshi-Bold';
+	font-size: 20px;
+	line-height: 1;
+	color: var(--color-secondary);
+	margin-bottom: 18px;
+}
+.pricing-content p {
+	font-family: 'Satoshi-Regular';
+	font-size: 17px;
+	line-height: 24px;
+	color: var(--color-secondary);
+	margin-bottom: 22px;
+}
+.pricing-content h6 {
+	font-family: 'Satoshi-Bold';
+	font-size: 22px;
+	line-height: 1;
+	color: var(--color-secondary);
+	margin-bottom: 22px;
+}
+.pricing-content a {
+	font-family: 'Satoshi-Bold';
+	font-size: 15px;
+	line-height: 1;
+	color: var(--color-secondary);
+	position: relative;
+}
+.pricing-content a:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 1px;
+	width: 100%;
+	background-color: var(--color-secondary);
+}

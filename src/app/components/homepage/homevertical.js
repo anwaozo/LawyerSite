@@ -1,8 +1,10 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React,{useState} from "react";
 
 
 export default function Homeverticalcomponent() {
+  const [section, setSection] = useState("Discovery call");
   return (
     <section className="verticle-tab-area">
         <div className="page-container">
@@ -14,27 +16,27 @@ export default function Homeverticalcomponent() {
               data-aos-duration="1500"
             >
               <button
-                className="tablinks"
-                onclick="openCity(event, 'discovery-call')"
+                className={`tablinks ${section==="Discovery call" ? "active" : ""}`}
+                onClick={() => setSection("Discovery call")}
                 id="defaultOpen"
               >
                 Discovery call
               </button>
               <button
-                className="tablinks"
-                onclick="openCity(event, 'case-analysis')"
+                className={`tablinks ${section==="Case analysis" ? "active" : ""}`}
+                onClick={() => setSection("Case analysis")}
               >
                 Case analysis
               </button>
               <button
-                className="tablinks"
-                onclick="openCity(event, 'budgeting')"
+                className={`tablinks ${section==="Budgeting" ? "active" : ""}`}
+                onClick={() => setSection("Budgeting")}
               >
                 Budgeting
               </button>
               <button
-                className="tablinks"
-                onclick="openCity(event, 'execution')"
+               className={`tablinks ${section==="Execution" ? "active" : ""}`}
+               onClick={() => setSection("Execution")}
               >
                 Execution
               </button>
@@ -45,7 +47,7 @@ export default function Homeverticalcomponent() {
               data-aos-delay="300"
               data-aos-duration="1500"
             >
-              <div id="discovery-call" className="tabcontent">
+              {section==="Discovery call" && <div id="discovery-call" className="tabcontent">
                 <p>
                   Neque porro quisquam est, qui dolorem ipsum quia dolor sit
                   amet, consectetur, adipisci velit, sed quSed ut perspiciatis
@@ -59,8 +61,8 @@ export default function Homeverticalcomponent() {
                   occaecat cupidatat non proident, sunt in culpa qui officia
                   deserunt mollit anim id es
                 </p>
-              </div>
-              <div id="case-analysis" className="tabcontent">
+              </div>}
+              {section==="Case analysis" && <div id="case-analysis" className="tabcontent">
                 <p>
                   Neque porro quisquam est, qui dolorem ipsum quia dolor sit
                   amet, consectetur, adipisci velit, sed quSed ut perspiciatis
@@ -73,8 +75,8 @@ export default function Homeverticalcomponent() {
                   laboris nisi ut aliquip ex ea commodo con Excepteur sint
                   occaecat cupidatat non proident
                 </p>
-              </div>
-              <div id="budgeting" className="tabcontent">
+              </div>}
+              {section==="Budgeting" && <div id="budgeting" className="tabcontent">
                 <p>
                   Neque porro quisquam est, qui dolorem ipsum quia dolor sit
                   amet, consectetur, adipisci velit, sed quSed ut perspiciatis
@@ -86,8 +88,8 @@ export default function Homeverticalcomponent() {
                   enim ad minim veniam, quis nostrud exercitation ullamco
                   laboris nisi ut aliquip ex ea commodo con
                 </p>
-              </div>
-              <div id="execution" className="tabcontent">
+              </div>}
+              {section==="Execution" &&<div id="execution" className="tabcontent">
                 <p>
                   Neque porro quisquam est, qui dolorem ipsum quia dolor sit
                   amet, consectetur, adipisci velit, sed quSed ut perspiciatis
@@ -98,7 +100,7 @@ export default function Homeverticalcomponent() {
                   adipiscing elit, sed do eiusmod tempor incididunt ut labore Ut
                   enim ad minim veniam, quis nostrud exercitation ullamco
                 </p>
-              </div>
+              </div>}
             </div>
           </div>
         </div>

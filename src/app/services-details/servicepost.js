@@ -103,7 +103,7 @@ export default function ServicedetailspostComponent() {
 								</div>
 								<h4>DISPUTE RESOLUTION</h4>
 								<p>
-									Our team of legal professionals in Counsel's
+									Our team of legal professionals in Counsel&apos;s
 									Litigation and Dispute Resolution division
 									is committed to delivering strategic
 									advocacy and efficient representation in
@@ -133,7 +133,7 @@ export default function ServicedetailspostComponent() {
 								</div>
 								<h4>CORPORATE AND COMMERCIAL LAW</h4>
 								<p>
-									Our team of legal professionals in Counsel's
+									Our team of legal professionals in Counsel&apos;s
 									Litigation and Dispute Resolution division
 									is committed to delivering strategic
 									advocacy and efficient representation in

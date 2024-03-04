@@ -34,7 +34,7 @@ export default function FooterComponent() {
               </div>
               <p>linkedin</p>
               <img
-                src="./images/right-arrow.svg"
+                src="/images/right-arrow.svg"
                 className="arrow-right"
                 alt=""
               />

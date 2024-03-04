@@ -21,10 +21,10 @@ export default function BlogdetailsmainComponent() {
             data-aos-duration="1500"
           >
             <div className="lawyer-photo">
-              <img
+              <Image
                 src="/images/lawyer-photo.png"
-                width="60"
-                height="60"
+                width={60}
+                height={60}
                 loading="lazy"
                 decoding="async"
                 alt=""

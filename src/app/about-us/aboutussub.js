@@ -1,10 +1,18 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import dynamic from "next/dynamic";
 
 export default function AboutussubComponent() {
+  const [showModal, setShowModal] = useState(false);
+  // console.log(showModal);
   return (
-    <main className="inner-about-wrapper">
+    <main
+      className="inner-about-wrapper"
+      onClick={() => {
+        setShowModal(false);
+      }}
+    >
       {/* <!-- About Area Section --> */}
       <section className="about-area">
         <div className="page-container">
@@ -95,10 +103,16 @@ export default function AboutussubComponent() {
               >
                 Case analysis
               </button>
-              <button className="tablinks" onclick="openCity(event, 'budgeting')">
+              <button
+                className="tablinks"
+                onclick="openCity(event, 'budgeting')"
+              >
                 Budgeting
               </button>
-              <button className="tablinks" onclick="openCity(event, 'execution')">
+              <button
+                className="tablinks"
+                onclick="openCity(event, 'execution')"
+              >
                 Execution
               </button>
             </div>
@@ -186,11 +200,17 @@ export default function AboutussubComponent() {
                 data-aos-delay="200"
                 data-aos-duration="1500"
               >
-                <div className="colleagues-item modalButton">
-                  <img
+                <div
+                  className="colleagues-item modalButton"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setShowModal(true);
+                  }}
+                >
+                  <Image
                     src="/images/albert-flores.png"
-                    width="368"
-                    height="451"
+                    width={368}
+                    height={451}
                     loading="lazy"
                     decoding="async"
                     alt=""
@@ -207,11 +227,17 @@ export default function AboutussubComponent() {
                 data-aos-delay="400"
                 data-aos-duration="1500"
               >
-                <div className="colleagues-item modalButton">
-                  <img
+                <div
+                  className="colleagues-item modalButton"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setShowModal(true);
+                  }}
+                >
+                  <Image
                     src="/images/ralph-edwards.png"
-                    width="368"
-                    height="451"
+                    width={368}
+                    height={451}
                     loading="lazy"
                     decoding="async"
                     alt=""
@@ -228,11 +254,17 @@ export default function AboutussubComponent() {
                 data-aos-delay="600"
                 data-aos-duration="1500"
               >
-              <div className="colleagues-item modalButton">
-                  <img
+                <div
+                  className="colleagues-item modalButton"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setShowModal(true);
+                  }}
+                >
+                  <Image
                     src="/images/courtney-henry.png"
-                    width="368"
-                    height="451"
+                    width={368}
+                    height={451}
                     loading="lazy"
                     decoding="async"
                     alt=""
@@ -250,11 +282,17 @@ export default function AboutussubComponent() {
                 data-aos-delay="200"
                 data-aos-duration="1500"
               >
-              <div className="colleagues-item modalButton">
-                  <img
+                <div
+                  className="colleagues-item modalButton"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setShowModal(true);
+                  }}
+                >
+                  <Image
                     src="/images/albert-flores.png"
-                    width="368"
-                    height="451"
+                    width={368}
+                    height={451}
                     loading="lazy"
                     decoding="async"
                     alt=""
@@ -271,11 +309,17 @@ export default function AboutussubComponent() {
                 data-aos-delay="400"
                 data-aos-duration="1500"
               >
-              <div className="colleagues-item modalButton">
-                  <img
+                <div
+                  className="colleagues-item modalButton"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setShowModal(true);
+                  }}
+                >
+                  <Image
                     src="/images/ralph-edwards.png"
-                    width="368"
-                    height="451"
+                    width={368}
+                    height={451}
                     loading="lazy"
                     decoding="async"
                     alt=""
@@ -292,11 +336,17 @@ export default function AboutussubComponent() {
                 data-aos-delay="600"
                 data-aos-duration="1500"
               >
-              <div className="colleagues-item modalButton">
-                  <img
+                <div
+                  className="colleagues-item modalButton"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setShowModal(true);
+                  }}
+                >
+                  <Image
                     src="/images/courtney-henry.png"
-                    width="368"
-                    height="451"
+                    width={368}
+                    height={451}
                     loading="lazy"
                     decoding="async"
                     alt=""
@@ -314,11 +364,17 @@ export default function AboutussubComponent() {
                 data-aos-delay="200"
                 data-aos-duration="1500"
               >
-              <div className="colleagues-item modalButton">
-                  <img
+                <div
+                  className="colleagues-item modalButton"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setShowModal(true);
+                  }}
+                >
+                  <Image
                     src="/images/albert-flores.png"
-                    width="368"
-                    height="451"
+                    width={368}
+                    height={451}
                     loading="lazy"
                     decoding="async"
                     alt=""
@@ -335,11 +391,17 @@ export default function AboutussubComponent() {
                 data-aos-delay="400"
                 data-aos-duration="1500"
               >
-              <div className="colleagues-item modalButton">
-                  <img
+                <div
+                  className="colleagues-item modalButton"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setShowModal(true);
+                  }}
+                >
+                  <Image
                     src="/images/ralph-edwards.png"
-                    width="368"
-                    height="451"
+                    width={368}
+                    height={451}
                     loading="lazy"
                     decoding="async"
                     alt=""
@@ -356,11 +418,17 @@ export default function AboutussubComponent() {
                 data-aos-delay="600"
                 data-aos-duration="1500"
               >
-              <div className="colleagues-item modalButton">
-                  <img
+                <div
+                  className="colleagues-item modalButton"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setShowModal(true);
+                  }}
+                >
+                  <Image
                     src="/images/courtney-henry.png"
-                    width="368"
-                    height="451"
+                    width={368}
+                    height={451}
                     loading="lazy"
                     decoding="async"
                     alt=""
@@ -408,7 +476,9 @@ export default function AboutussubComponent() {
                       placeholder="Your message..."
                     ></textarea>
                   </div>
-                  <button type="submit" className="btn-submit">Send message</button>
+                  <button type="submit" className="btn-submit">
+                    Send message
+                  </button>
                 </form>
               </div>
             </div>
@@ -482,14 +552,65 @@ export default function AboutussubComponent() {
               </div>
               <div className="content-box">
                 <span>Mail us on</span>
-                <a href="mailto:sara.cruz@example.com4"
-                  >sara.cruz@example.com</a
-                >
+                <a href="mailto:sara.cruz@example.com4">
+                  sara.cruz@example.com
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
+      {showModal && (
+        <div id="modalBox" className="modal">
+          <div className="modal-content modal-animate">
+            <figure>
+              <Image
+                src="/images/lawyer.jpg"
+                width={1200}
+                height={1362}
+                loading="lazy"
+                decoding="async"
+                alt=""
+              />
+            </figure>
+            <div className="content-wrap">
+              <div className="post-name">lawyer</div>
+              <h5>Albert Flores</h5>
+              <p>
+                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                consectetur, adipisci velit, sed quSed ut perspiciatis unde
+                omnis iste natus error sit voluptatem accusantium doloremque
+                laudantium, toNemo enim ipsam voluptatem quia voluptas sit
+                aspernatur aut odit aut fugit, sed quia consequuntur ma Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo con Excepteur sint occaecat cupidatat non proident, sunt
+                in culpa qui officia deserunt mollit anim id es
+              </p>
+              <div className="Specialties">
+                <h6>Specialties:</h6>
+                <div className="Specialties-item">Advocacy</div>
+                <div className="Specialties-item">Legal Counselling</div>
+              </div>
+              <div className="social-box">
+                <a href="#" className="icon-box">
+                  <img src="./images/icons/ftr-linkedin.svg" alt="" />
+                </a>
+                <a href="#" className="icon-box">
+                  <img src="./images/icons/ftr-instagram.svg" alt="" />
+                </a>
+                <a href="#" className="icon-box">
+                  <img src="./images/icons/ftr-facebook.svg" alt="" />
+                </a>
+                <a href="#" className="icon-box">
+                  <img src="./images/icons/ftr-twitter.svg" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
