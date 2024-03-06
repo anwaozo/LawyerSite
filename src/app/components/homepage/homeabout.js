@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { useEffect } from "react";
 import dynamic from "next/dynamic";
-import { legalTeamSection } from "../../service-cms/homePage";
+import { legalPartnerSection } from "../../service-cms/homePage";
 
 export default function HomeaboutComponent() {
   console.log(legalTeamSection);

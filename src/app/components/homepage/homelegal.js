@@ -3,7 +3,7 @@ import React from "react";
 import { legalPracticesSection } from "../../service-cms/homePage";
 
 export default function Homelegalcomponent() {
-  console.log(legalPracticesSection);
+  // console.log(legalPracticesSection);
   const { title, sectionImage, sectionLink, sectionInfo } =
     legalPracticesSection;
   return (

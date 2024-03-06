@@ -3,7 +3,7 @@ import React from "react";
 import { heroSection } from "../../service-cms/homePage";
 
 export default function Homesectioncomponent() {
-  console.log(heroSection);
+  // console.log(heroSection);
   const {
     heroImage,
     styledHeading,
