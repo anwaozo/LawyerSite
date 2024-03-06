@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import dynamic from "next/dynamic";
+import blogs from "../../service-cms/blogs";
 
 const HeaderComponent = dynamic(() => import("../../shared/header"), {
   ssr: true,
@@ -18,6 +19,7 @@ const FooterComponent = dynamic(() => import("../../shared/footer"), {
 });
 
 export default function BlogComponent() {
+  // console.log("blogs", blogs);
   return (
     <React.Fragment>
       <HeaderComponent />

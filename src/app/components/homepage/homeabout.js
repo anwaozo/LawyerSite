@@ -1,11 +1,11 @@
 import Image from "next/image";
 import React from "react";
 import dynamic from "next/dynamic";
-import { legalTeamSection } from "../../service-cms/homePage";
+import { legalPartnerSection } from "../../service-cms/homePage";
 
 export default function HomeaboutComponent() {
-  console.log(legalTeamSection);
-  const { title, subHeading, sectionLink, sectionInfo } = legalTeamSection;
+  // console.log(legalPartnerSection);
+  const { title, subHeading, sectionLink, sectionInfo } = legalPartnerSection;
   return (
     <section className="about-area">
       <div className="page-container">

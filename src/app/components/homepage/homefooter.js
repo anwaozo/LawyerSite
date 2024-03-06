@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import dynamic from "next/dynamic";
-import { footerInfo } from "../../service-cms/homePage";
+import { footerInfo } from "../../service-cms/applicationFragments";
 
 export default function HomefooterComponent() {
   const {
