@@ -4,6 +4,7 @@ import React, { useState } from "react";
 
 export default function CollegueSection({ collegueSectionTitle, collegues }) {
   const [showModal, setShowModal] = useState(null);
+
   return (
     <>
       <section className="colleagues-area">
@@ -30,7 +31,8 @@ export default function CollegueSection({ collegueSectionTitle, collegues }) {
                   <div
                     className="colleagues-item modalButton"
                     onClick={(e) => {
-                      e.stopPropagation();
+                      // e.stopPropagation();
+                      // console.log(c);
                       setShowModal(c);
                     }}
                   >
@@ -57,6 +59,7 @@ export default function CollegueSection({ collegueSectionTitle, collegues }) {
         <main
           className="inner-about-wrapper"
           onClick={() => {
+            console.log("close");
             setShowModal(null);
           }}
         >
