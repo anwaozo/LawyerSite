@@ -5,6 +5,7 @@ import Link from "next/link";
 
 export default function FooterComponent() {
   // console.log(attributes,"check")
+  const { logo, quickMenu, copyright: copyrightText, socialMenu } = footerInfo;
   return (
     <React.Fragment>
       <footer className="footer">
