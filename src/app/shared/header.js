@@ -33,7 +33,7 @@ export default function HeaderComponent() {
                 {menu?.map((item) => (
                   <li
                     key={item?.linkLabel}
-                    className={`${
+                    className={`pe-auto ${
                       currentPath === item?.linkPath ? "active" : "clickable"
                     }`}
                   >

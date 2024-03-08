@@ -1711,3 +1711,7 @@ img {
   width: 100%;
   background-color: var(--color-secondary);
 }
+
+.clickable{
+  cursor: pointer;
+}
