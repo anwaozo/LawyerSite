@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import { footerInfo } from "../service-cms/applicationFragments";
+import { footerInfo } from "../../../service-cms/applicationFragments";
+import Link from "next/link";
 
 export default function FooterComponent() {
   const { logo, copyright: copyrightText, quickMenu, socialMenu } = footerInfo;
@@ -9,7 +10,7 @@ export default function FooterComponent() {
     <React.Fragment>
       <footer className="footer">
         <div className="page-container">
-          <a className="footer-logo">
+          <Link href="/" className="footer-logo">
             <img
               src={logo}
               width=""
@@ -18,63 +19,31 @@ export default function FooterComponent() {
               decoding="async"
               alt="Logo"
             />
-          </a>
+          </Link>
           <div className="footer-menu">
-            <a>Teams</a>
-            <a>Privacy Policy</a>
-            <a>Contact</a>
-            <a>Services</a>
-            <a>About</a>
-            <a>Blog</a>
+            {quickMenu?.map((item) => (
+              <Link key={item?.linkLabel} href={item?.linkPath}>
+                {item?.linkLabel}
+              </Link>
+            ))}
           </div>
           <div className="footer-social-media">
-            <a>
-              <div className="icon-box">
-                <img src="/images/icons/ftr-linkedin.svg" alt="" />
-              </div>
-              <p>linkedin</p>
-              <img
-                src="/images/right-arrow.svg"
-                className="arrow-right"
-                alt=""
-              />
-            </a>
-            <a>
-              <div className="icon-box">
-                <img src="/images/icons/ftr-instagram.svg" alt="" />
-              </div>
-              <p>instagram</p>
-              <img
-                src="/images/right-arrow.svg"
-                className="arrow-right"
-                alt=""
-              />
-            </a>
-            <a>
-              <div className="icon-box">
-                <img src="/images/icons/ftr-facebook.svg" alt="" />
-              </div>
-              <p>facebook</p>
-              <img
-                src="/images/right-arrow.svg"
-                className="arrow-right"
-                alt=""
-              />
-            </a>
-            <a>
-              <div className="icon-box">
-                <img src="/images/icons/ftr-twitter.svg" alt="" />
-              </div>
-              <p>twitter x</p>
-              <img
-                src="/images/right-arrow.svg"
-                className="arrow-right"
-                alt=""
-              />
-            </a>
+            {socialMenu?.map((item) => (
+              <Link key={item?.linkLabel} href={item?.linkPath}>
+                <div className="icon-box">
+                  <img src={item?.linkIcon} alt={item?.linkLabel} />
+                </div>
+                <p>{item?.linkLabel}</p>
+                <img
+                  src="/images/right-arrow.svg"
+                  className="arrow-right"
+                  alt=""
+                />
+              </Link>
+            ))}
           </div>
           <p className="tagline">
-            Template Designed by <span>Apperr Designs</span>
+            {copyrightText.copyright1} <span>{copyrightText.copyright2}</span>
           </p>
         </div>
       </footer>

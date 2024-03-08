@@ -22,25 +22,6 @@ heroSection:
       iconPath: /facebook
     - icon: img/extra.svg
       iconPath: /twitter
-legalPartnerSection:
-  title: Your Legal Partner in Every Step
-  subHeading: Our team of accomplished attorneys brings a wealth of legal
-    knowledge and expertise across various practice areas. Whether you need
-    assistance with personal injury claims, family matters, business disputes,
-    or other legal issues, we have the skills to represent your interests
-    effectively.
-  sectionInfo:
-    - title: Team members
-      displayedNumber: "12"
-    - title: Cases won
-      displayedNumber: "32"
-    - title: Happy clients
-      displayedNumber: "20"
-    - title: Branches
-      displayedNumber: "2"
-  sectionLink:
-    linkLabel: Read More
-    linkPath: /about-us
 legalPracticesSection:
   title: Our Legal Practices
   sectionImage: img/legal-practice-bg.jpg
@@ -54,46 +35,6 @@ legalPracticesSection:
     - corporate_law_1
     - business_litigation
     - legal_counselling_1
-bussinessInformationSection:
-  - title: Discovery call
-    content: Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-      consectetur, adipisci velit, sed quSed ut perspiciatis unde omnis iste
-      natus error sit voluptatem accusantium doloremque laudantium, toNemo enim
-      ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-      consequuntur ma Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-      sed do eiusmod tempor incididunt ut labore Ut enim ad minim veniam, quis
-      nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-      deserunt mollit anim id es
-  - title: Case analysis
-    content: Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-      consectetur, adipisci velit, sed quSed ut perspiciatis unde omnis iste
-      natus error sit voluptatem accusantium doloremque laudantium, toNemo enim
-      ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-      consequuntur ma Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-      sed do eiusmod tempor incididunt ut labore Ut enim ad minim veniam, quis
-      nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-  - title: Budgeting
-    content: Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-      consectetur, adipisci velit, sed quSed ut perspiciatis unde omnis iste
-      natus error sit voluptatem accusantium doloremque laudantium, toNemo enim
-      ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-      consequuntur ma Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-      sed do eiusmod tempor incididunt ut labore Ut enim ad minim veniam, quis
-      nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-      deserunt mollit anim id es
-  - title: Execution
-    content: Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-      consectetur, adipisci velit, sed quSed ut perspiciatis unde omnis iste
-      natus error sit voluptatem accusantium doloremque laudantium, toNemo enim
-      ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-      consequuntur ma Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-      sed do eiusmod tempor incididunt ut labore Ut enim ad minim veniam, quis
-      nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-      deserunt mollit anim id es
 collegueSection:
   title: Meet our learned colleagues
   sectionLink:
@@ -117,7 +58,8 @@ clientTestimonialSection:
   clientTestimonial:
     - name: Brooklyn Simmons
       designation: President of Sales
-      testimonial: “Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+      testimonial:
+        “Amet minim mollit non deserunt ullamco est sit aliqua dolor do
         amet sint. Velit officia consequat duis enim velit mollit. Exercitation
         veniam consequat.”
       image: img/testimonial.png

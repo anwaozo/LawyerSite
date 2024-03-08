@@ -18,9 +18,16 @@ const Homelegalcomponent = dynamic(() => import("./homelegal"), {
   ssr: true,
 });
 
-const Homeverticalcomponent = dynamic(() => import("./homevertical"), {
-  ssr: true,
-});
+// const Homeverticalcomponent = dynamic(() => import("./homevertical"), {
+//   ssr: true,
+// });
+
+const Homeverticalcomponent = dynamic(
+  () => import("../../shared/bussinessInformationSection"),
+  {
+    ssr: true,
+  }
+);
 
 const Homecolleguecomponent = dynamic(() => import("./homecollegue"), {
   ssr: true,
@@ -34,11 +41,14 @@ const HomepostComponent = dynamic(() => import("./homepost"), {
   ssr: true,
 });
 
-const HometestimonialComponent = dynamic(() => import("./hometestimonial"), {
-  ssr: true,
-});
+const HometestimonialComponent = dynamic(
+  () => import("../../shared/evaluationFormSection"),
+  {
+    ssr: true,
+  }
+);
 
-const HomefooterComponent = dynamic(() => import("./homefooter"), {
+const HomefooterComponent = dynamic(() => import("../../shared/footer"), {
   ssr: true,
 });
 

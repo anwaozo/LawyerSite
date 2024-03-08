@@ -6,6 +6,6 @@ const BlogComponent = dynamic(() => import("../components/blogcomponent"), {
   ssr: true,
 });
 
-export default function BlogMainComponent() {
-  return <BlogComponent />;
+export default function BlogMainComponent({ searchParams }) {
+  return <BlogComponent author={searchParams.author} />;
 }

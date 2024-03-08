@@ -1,292 +1,43 @@
-"use client";
 import Image from "next/image";
 import React from "react";
 import dynamic from "next/dynamic";
-import { useRouter } from "next/navigation";
+import { format } from "date-fns";
+import Link from "next/link";
 
-export default function BlogpostComponent() {
-  const router = useRouter();
+export default function BlogpostComponent({ posts, author }) {
   return (
     <main className="inner-post-wrapper">
       <section className="post-area">
         <div className="page-container">
           <div className="row">
-            <div className="col-4">
-              <div
-                className="post-wrapper post-block clickable"
-                data-aos="fade-right"
-                data-aos-delay="200"
-                data-aos-duration="1500"
-                onClick={() => {
-                  router.push("/blogdetails?blogid=1");
-                }}
-              >
-                <div className="post-photo">
-                  <img
-                    src="/images/blog-default-one.png"
-                    loading="lazy"
-                    decoding="async"
-                    alt=""
-                  />
+            {posts
+              .filter((post) => (author ? post.author.slug === author : true))
+              .map((post, i) => (
+                <div key={post.slug} className="col-4">
+                  <Link href={`/blogdetails?slug=${post.slug}`}>
+                    <div
+                      className="post-wrapper post-block clickable"
+                      data-aos="fade-right"
+                      data-aos-delay={`${200 + (i % 3) * 200}`}
+                      data-aos-duration="1500"
+                    >
+                      <div className="post-photo">
+                        <img
+                          src={post.thumbnailImage}
+                          loading="lazy"
+                          decoding="async"
+                          alt={post.title}
+                        />
+                      </div>
+                      <div className="post-content">
+                        <span>{post.blogType}</span>
+                        <p>{post.title}</p>
+                        <h6>{format(new Date(post.date), "dd/MM/yyyy")}</h6>
+                      </div>
+                    </div>
+                  </Link>
                 </div>
-                <div className="post-content">
-                  <span>PERSONAL AFFAIRS</span>
-                  <p>Choosing Next of Kin</p>
-                  <h6>12/10/2023</h6>
-                </div>
-              </div>
-            </div>
-            <div className="col-4">
-              <div
-                className="post-wrapper"
-                data-aos="fade-right"
-                data-aos-delay="400"
-                data-aos-duration="1500"
-                onClick={() => {
-                  router.push("/blogdetails?blogid=2");
-                }}
-              >
-                <div className="post-photo">
-                  <img
-                    src="/images/blog-default-two.png"
-                    loading="lazy"
-                    decoding="async"
-                    alt=""
-                  />
-                </div>
-                <div className="post-content">
-                  <span>BUSINESS</span>
-                  <p>How to own a Copyright for your product</p>
-                  <h6>12/10/2023</h6>
-                </div>
-              </div>
-            </div>
-            <div className="col-4">
-              <div
-                className="post-wrapper"
-                data-aos="fade-right"
-                data-aos-delay="600"
-                data-aos-duration="1500"
-                onClick={() => {
-                  router.push("/blogdetails?blogid=3");
-                }}
-              >
-                <div className="post-photo">
-                  <img
-                    src="/images/blog-default-two.png"
-                    loading="lazy"
-                    decoding="async"
-                    alt=""
-                  />
-                </div>
-                <div className="post-content">
-                  <span>BUSINESS</span>
-                  <p>How to own a Copyright for your product</p>
-                  <h6>12/10/2023</h6>
-                </div>
-              </div>
-            </div>
-            <div className="col-4">
-              <div
-                className="post-wrapper post-block"
-                data-aos="fade-right"
-                data-aos-delay="200"
-                data-aos-duration="1500"
-                onClick={() => {
-                  router.push("/blogdetails?blogid=4");
-                }}
-              >
-                <div className="post-photo">
-                  <img
-                    src="/images/blog-default-one.png"
-                    loading="lazy"
-                    decoding="async"
-                    alt=""
-                  />
-                </div>
-                <div className="post-content">
-                  <span>PERSONAL AFFAIRS</span>
-                  <p>Choosing Next of Kin</p>
-                  <h6>12/10/2023</h6>
-                </div>
-              </div>
-            </div>
-            <div className="col-4">
-              <div
-                className="post-wrapper"
-                data-aos="fade-right"
-                data-aos-delay="400"
-                data-aos-duration="1500"
-                onClick={() => {
-                  router.push("/blogdetails?blogid=5");
-                }}
-              >
-                <div className="post-photo">
-                  <img
-                    src="/images/blog-default-two.png"
-                    loading="lazy"
-                    decoding="async"
-                    alt=""
-                  />
-                </div>
-                <div className="post-content">
-                  <span>BUSINESS</span>
-                  <p>How to own a Copyright for your product</p>
-                  <h6>12/10/2023</h6>
-                </div>
-              </div>
-            </div>
-            <div className="col-4">
-              <div
-                className="post-wrapper"
-                data-aos="fade-right"
-                data-aos-delay="600"
-                data-aos-duration="1500"
-                onClick={() => {
-                  router.push("/blogdetails?blogid=6");
-                }}
-              >
-                <div className="post-photo">
-                  <img
-                    src="/images/blog-default-two.png"
-                    loading="lazy"
-                    decoding="async"
-                    alt=""
-                  />
-                </div>
-                <div className="post-content">
-                  <span>BUSINESS</span>
-                  <p>How to own a Copyright for your product</p>
-                  <h6>12/10/2023</h6>
-                </div>
-              </div>
-            </div>
-            <div className="col-4">
-              <div
-                className="post-wrapper post-block"
-                data-aos="fade-right"
-                data-aos-delay="200"
-                data-aos-duration="1500"
-                onClick={() => {
-                  router.push("/blogdetails?blogid=7");
-                }}
-              >
-                <div className="post-photo">
-                  <img
-                    src="/images/blog-default-one.png"
-                    loading="lazy"
-                    decoding="async"
-                    alt=""
-                  />
-                </div>
-                <div className="post-content">
-                  <span>PERSONAL AFFAIRS</span>
-                  <p>Choosing Next of Kin</p>
-                  <h6>12/10/2023</h6>
-                </div>
-              </div>
-            </div>
-            <div className="col-4">
-              <div
-                className="post-wrapper"
-                data-aos="fade-right"
-                data-aos-delay="400"
-                data-aos-duration="1500"
-                onClick={() => {
-                  router.push("/blogdetails?blogid=8");
-                }}
-              >
-                <div className="post-photo">
-                  <img
-                    src="/images/blog-default-two.png"
-                    loading="lazy"
-                    decoding="async"
-                    alt=""
-                  />
-                </div>
-                <div className="post-content">
-                  <span>BUSINESS</span>
-                  <p>How to own a Copyright for your product</p>
-                  <h6>12/10/2023</h6>
-                </div>
-              </div>
-            </div>
-            <div className="col-4">
-              <div
-                className="post-wrapper"
-                data-aos="fade-right"
-                data-aos-delay="600"
-                data-aos-duration="1500"
-                onClick={() => {
-                  router.push("/blogdetails?blogid=9");
-                }}
-              >
-                <div className="post-photo">
-                  <img
-                    src="/images/blog-default-two.png"
-                    loading="lazy"
-                    decoding="async"
-                    alt=""
-                  />
-                </div>
-                <div className="post-content">
-                  <span>BUSINESS</span>
-                  <p>How to own a Copyright for your product</p>
-                  <h6>12/10/2023</h6>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="eveluation-form-area">
-        <div className="page-container">
-          <div className="row">
-            <div className="col-6">
-              <div
-                className="evaluation-form-box"
-                data-aos="fade-right"
-                data-aos-delay="200"
-                data-aos-duration="1500"
-              >
-                <h3>Get in touch</h3>
-                <form>
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      className="inputs"
-                      placeholder="Your full name"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <input
-                      type="email"
-                      className="inputs"
-                      placeholder="me@company.com"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <textarea
-                      className="inputs"
-                      placeholder="Your message..."
-                    ></textarea>
-                  </div>
-                  <button type="submit" className="btn-submit">
-                    Send message
-                  </button>
-                </form>
-              </div>
-            </div>
-            <div className="col-6">
-              <h4
-                data-aos="fade-left"
-                data-aos-delay="200"
-                data-aos-duration="1500"
-              >
-                Our Professional Expert Law Team Is Always Ready To Serve You
-              </h4>
-            </div>
+              ))}
           </div>
         </div>
       </section>

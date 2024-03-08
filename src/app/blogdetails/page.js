@@ -1,6 +1,7 @@
 import Image from "next/image";
-import React from "react";
+import React, { useMemo } from "react";
 import dynamic from "next/dynamic";
+import { getPost, getRecommendedBlogs } from "../../../service-cms/blogs";
 
 const BlogdetailsComponent = dynamic(
   () => import("../components/blogdetailscomponent"),
@@ -9,6 +10,11 @@ const BlogdetailsComponent = dynamic(
   }
 );
 
-export default function BlogdetailsmainComponent() {
-  return <BlogdetailsComponent />;
+export default function BlogdetailsmainComponent({ searchParams }) {
+  console.log(searchParams);
+  const blog = useMemo(() => getPost(searchParams.slug), [searchParams.slug]);
+  const recommendedBlogs = useMemo(() => getRecommendedBlogs(), []);
+  return (
+    <BlogdetailsComponent blog={blog} recommendedBlogs={recommendedBlogs} />
+  );
 }

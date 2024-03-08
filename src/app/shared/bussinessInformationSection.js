@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import { bussinessInformationSection } from "../../../../service-cms/applicationFragments";
+import { bussinessInformationSection } from "../../../service-cms/applicationFragments";
 
-export default function Homeverticalcomponent() {
+export default function BussinessInformationSection() {
   const [section, setSection] = useState(bussinessInformationSection[0].title);
   return (
     <section className="verticle-tab-area">

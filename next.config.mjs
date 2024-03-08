@@ -4,7 +4,8 @@ const nextConfig = {
   webpack: (config, { isServer }) => {
     config.module.rules.push({
       test: /\.md$/,
-      use: "frontmatter-markdown-loader",
+      loader: "frontmatter-markdown-loader",
+      options: { mode: ["react-component"] },
     });
 
     if (!isServer) {

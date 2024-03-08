@@ -16,7 +16,7 @@ const BlogdetailsmainComponent = dynamic(() => import("./blogdetailsmain"), {
   ssr: true,
 });
 const BlogdetailstestimonialComponent = dynamic(
-  () => import("./blogdetailstestimonial"),
+  () => import("../../shared/evaluationFormSection"),
   {
     ssr: true,
   }
@@ -26,12 +26,18 @@ const FooterComponent = dynamic(() => import("../../shared/footer"), {
   ssr: true,
 });
 
-export default function BlogdetailsComponent() {
+export default function BlogdetailsComponent({ blog, recommendedBlogs }) {
   return (
     <React.Fragment>
       <HeaderComponent />
-      <BlogdetailsbannerComponent />
-      <BlogdetailsmainComponent />
+      <BlogdetailsbannerComponent
+        blogImage={blog.featuredImage || blog.thumbnailImage}
+        blogTitle={blog.title}
+      />
+      <BlogdetailsmainComponent
+        blog={blog}
+        recommendedBlogs={recommendedBlogs}
+      />
       <BlogdetailstestimonialComponent />
       <FooterComponent />
     </React.Fragment>

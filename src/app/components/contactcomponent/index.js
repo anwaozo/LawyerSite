@@ -13,7 +13,14 @@ const ContactdetailsbannerComponent = dynamic(
   }
 );
 const ContactdetailsmainComponent = dynamic(
-  () => import("./contactdetailsmain"),
+  () => import("../../shared/contactUsSection"),
+  {
+    ssr: true,
+  }
+);
+
+const EvaluationFormSection = dynamic(
+  () => import("../../shared/evaluationFormSection"),
   {
     ssr: true,
   }
@@ -29,6 +36,7 @@ export default function ContactdetailsComponent() {
       <HeaderComponent />
       <ContactdetailsbannerComponent />
       <ContactdetailsmainComponent />
+      <EvaluationFormSection />
       <FooterComponent />
     </React.Fragment>
   );

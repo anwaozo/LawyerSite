@@ -54,33 +54,6 @@ collections:
                   - { label: "Icon", name: "icon", widget: "image" }
                   - { label: "Icon Path", name: "iconPath", widget: "string" }
 
-          - name: "legalPartnerSection"
-            label: "Legal Partner Section"
-            widget: "object"
-            fields:
-              - { label: "Section Title", name: "title", widget: "string" }
-              - {
-                  label: "Section SubTitle",
-                  name: "subHeading",
-                  widget: "text",
-                }
-              - name: "sectionLink"
-                label: "Section Link"
-                widget: "object"
-                fields:
-                  - { label: "Link Label", name: "linkLabel", widget: "string" }
-                  - { label: "Link Path", name: "linkPath", widget: "string" }
-              - name: "sectionInfo"
-                label: "Section Info"
-                widget: "list"
-                fields:
-                  - { label: "Title", name: "title", widget: "string" }
-                  - {
-                      label: "Displayed Number",
-                      name: "displayedNumber",
-                      widget: "string",
-                    }
-
           - name: "legalPracticesSection"
             label: "Legal Practices Section"
             widget: "object"
@@ -108,13 +81,6 @@ collections:
                   display_fields: ["{{slug}}"],
                   multiple: true,
                 }
-
-          - name: "bussinessInformationSection"
-            label: "Bussiness Information Section"
-            widget: "list"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Content", name: "content", widget: "text" }
 
           - name: "collegueSection"
             label: "Collegue Section"
@@ -227,6 +193,78 @@ collections:
               display_fields: ["{{slug}}"],
               multiple: true,
             }
+      - name: "ourServices"
+        label: "Our Services Page"
+        file: "content/pages/services.md"
+        fields:
+          - { label: "Page Title", name: "pageTitle", widget: "string" }
+          - { label: "Page Image", name: "pageImage", widget: "image" }
+          - {
+              label: "Services",
+              name: "services",
+              widget: "relation",
+              collection: "services",
+              search_fields: ["title"],
+              value_field: "{{slug}}",
+              display_fields: ["{{slug}}"],
+              multiple: true,
+            }
+      - name: "contactUs"
+        label: "Contact Us Page"
+        file: "content/pages/contactUs.md"
+        fields:
+          - { label: "Page Title", name: "pageTitle", widget: "string" }
+          - { label: "Page Image", name: "pageImage", widget: "image" }
+      - name: "aboutUs"
+        label: "About Us Page"
+        file: "content/pages/aboutUs.md"
+        fields:
+          - { label: "Page Title", name: "pageTitle", widget: "string" }
+          - {
+              label: "Page Image",
+              name: "pageImage",
+              widget: "image",
+              required: false,
+            }
+          - {
+              label: "Collegue Section Title",
+              name: "collegueSectionTitle",
+              widget: "string",
+            }
+          - {
+              label: "Collegues",
+              name: "collegues",
+              widget: "relation",
+              collection: "collegues",
+              search_fields: ["collegueName"],
+              value_field: "{{slug}}",
+              display_fields: ["{{collegueName}}"],
+              multiple: true,
+            }
+      - name: "pricing"
+        label: "Pricing Page"
+        file: "content/pages/pricing.md"
+        fields:
+          - { label: "Page Title", name: "pageTitle", widget: "string" }
+          - { label: "Page Image", name: "pageImage", widget: "image" }
+          - name: "pricingList"
+            label: "Pricing List"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - {
+                  label: "Price",
+                  name: "price",
+                  widget: "number",
+                  value_type: "float",
+                }
+              - name: "link"
+                label: "Link"
+                widget: "object"
+                fields:
+                  - { label: "Link Label", name: "linkLabel", widget: "string" }
+                  - { label: "Link Path", name: "linkPath", widget: "string" }
 
   - label: "Blog"
     name: "blog"
@@ -451,6 +489,38 @@ collections:
                       - { label: "Title", name: "title", widget: "string" }
                       - { label: "Email", name: "email", widget: "string" }
                       - { label: "Icon", name: "icon", widget: "image" }
+          - name: "legalPartnerSection"
+            label: "Legal Partner Section"
+            widget: "object"
+            fields:
+              - { label: "Section Title", name: "title", widget: "string" }
+              - {
+                  label: "Section SubTitle",
+                  name: "subHeading",
+                  widget: "text",
+                }
+              - name: "sectionLink"
+                label: "Section Link"
+                widget: "object"
+                fields:
+                  - { label: "Link Label", name: "linkLabel", widget: "string" }
+                  - { label: "Link Path", name: "linkPath", widget: "string" }
+              - name: "sectionInfo"
+                label: "Section Info"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - {
+                      label: "Displayed Number",
+                      name: "displayedNumber",
+                      widget: "string",
+                    }
+          - name: "bussinessInformationSection"
+            label: "Bussiness Information Section"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Content", name: "content", widget: "text" }
 
   - label: "Services"
     name: "services"

@@ -1,11 +1,10 @@
 import Image from "next/image";
 import React from "react";
 import dynamic from "next/dynamic";
-import { pageTitle, pageImage } from "../../../../service-cms/contactUs";
 
-export default function ContactdetailsbannerComponent() {
+export default function PageBannerComponent({ pageTitle, pageImage }) {
   return (
-    <section className="inner-banner-area">
+    <section class="inner-banner-area">
       <Image
         src={`/${pageImage}`}
         width={1920}
@@ -14,8 +13,8 @@ export default function ContactdetailsbannerComponent() {
         decoding="async"
         alt=""
       />
-      <div className="inner-banner-content">
-        <div className="page-container">
+      <div class="inner-banner-content">
+        <div class="page-container">
           <h1 data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500">
             {pageTitle}
           </h1>
