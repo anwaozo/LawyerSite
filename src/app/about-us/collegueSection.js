@@ -89,7 +89,7 @@ export default function CollegueSection({ collegueSectionTitle, collegues }) {
                 </div>
                 <div className="social-box">
                   {showModal.socialIcons.map((s) => (
-                    <a key={s.iconPath} href="#" className="icon-box">
+                    <a key={s.iconPath} href={s.iconPath} className="icon-box">
                       <img src={s.icon} alt={s.icon} />
                     </a>
                   ))}

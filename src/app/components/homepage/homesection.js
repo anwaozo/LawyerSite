@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import { heroSection } from "../../../../service-cms/homePage";
+import Link from "next/link";
 
 export default function Homesectioncomponent() {
   const {
@@ -20,7 +21,7 @@ export default function Homesectioncomponent() {
             {socialMediaIcons?.map((item) => (
               <a
                 key={item?.iconPath}
-                href="#"
+                href={item?.iconPath}
                 data-aos="fade-right"
                 data-aos-delay="200"
                 data-aos-duration="1500"
@@ -51,14 +52,15 @@ export default function Homesectioncomponent() {
             >
               {description}
             </p>
-            <a
+            <Link
+              href={sectionLink?.linkPath}
               className="btn btn-primary"
               data-aos="fade-up"
               data-aos-delay="600"
               data-aos-duration="1500"
             >
               {sectionLink?.linkLabel}
-            </a>
+            </Link>
           </div>
         </div>
         <div className="home-banner-photo">

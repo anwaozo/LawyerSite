@@ -17,7 +17,7 @@ const FooterComponent = dynamic(() => import("./shared/footer"), {
 });
 
 export default function NotFound() {
-    const router = useRouter();
+  const router = useRouter();
   return (
     <React.Fragment>
       <HeaderComponent />
@@ -37,13 +37,13 @@ export default function NotFound() {
               <div className="not-found-menu">
                 <ul>
                   <li>
-                    <a href="#">Team</a>
+                    <a href="/pricing">Pricing</a>
                   </li>
                   <li>
-                    <a href="services.html">Services</a>
+                    <a href="/services">Services</a>
                   </li>
                   <li>
-                    <a href="contact.html">Contact</a>
+                    <a href="/contact-us">Contact</a>
                   </li>
                 </ul>
               </div>

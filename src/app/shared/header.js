@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
 import React, { useEffect } from "react";
 import { headerInfo } from "../../../service-cms/applicationFragments";
+import Link from "next/link";
 
 export default function HeaderComponent() {
   const router = useRouter();
@@ -13,12 +14,7 @@ export default function HeaderComponent() {
       <header className="header">
         <div className="page-container">
           <div className="header-block">
-            <a
-              className="logo clickable"
-              onClick={() => {
-                router.push("/");
-              }}
-            >
+            <Link className="logo clickable" href="/">
               <img
                 src={logo}
                 width=""
@@ -27,7 +23,7 @@ export default function HeaderComponent() {
                 decoding="async"
                 alt="Logo"
               />
-            </a>
+            </Link>
             <nav>
               <ul>
                 {menu?.map((item) => (
@@ -37,22 +33,16 @@ export default function HeaderComponent() {
                       currentPath === item?.linkPath ? "active" : "clickable"
                     }`}
                   >
-                    <a
-                      onClick={() => {
-                        router.push(item?.linkPath);
-                      }}
-                    >
-                      {item?.linkLabel}
-                    </a>
+                    <Link href={item?.linkPath}>{item?.linkLabel}</Link>
                   </li>
                 ))}
               </ul>
             </nav>
             <div className="mobile-menu">
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
         </div>
       </header>
