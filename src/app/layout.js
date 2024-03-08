@@ -13,13 +13,7 @@ export default function RootLayout({ children }) {
           $("nav").slideToggle("slow");
         });
       });
-      $(window).scroll(function () {
-        if ($(window).scrollTop() >= 200) {
-          $(".header").addClass("header-fixed");
-        } else {
-          $(".header").removeClass("header-fixed");
-        }
-      });
+      
     }
   }, []);
   return (
