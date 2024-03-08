@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
@@ -24,6 +25,9 @@ export default function HomepostComponent() {
               data-aos="fade-down"
               data-aos-delay="400"
               data-aos-duration="1500"
+              onClick={() => {
+                router.push(ourPostsSection.sectionLink.linkPath);
+              }}
             >
               {sectionLink.linkLabel}
             </Link>

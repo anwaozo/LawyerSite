@@ -4,8 +4,7 @@ import { footerInfo } from "../../../service-cms/applicationFragments";
 import Link from "next/link";
 
 export default function FooterComponent() {
-  const { logo, copyright: copyrightText, quickMenu, socialMenu } = footerInfo;
-
+  // console.log(attributes,"check")
   return (
     <React.Fragment>
       <footer className="footer">

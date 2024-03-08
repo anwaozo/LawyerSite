@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import { contactUsSection } from "../../../../service-cms/applicationFragments";

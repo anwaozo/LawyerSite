@@ -5,7 +5,7 @@ import { pageTitle, pageImage } from "../../../service-cms/services";
 
 export default function ServicebannerComponent() {
   return (
-    <section class="inner-banner-area">
+    <section className="inner-banner-area">
       <Image
         src={`/${pageImage}`}
         width={1920}
@@ -14,8 +14,8 @@ export default function ServicebannerComponent() {
         decoding="async"
         alt=""
       />
-      <div class="inner-banner-content">
-        <div class="page-container">
+      <div className="inner-banner-content">
+        <div className="page-container">
           <h1 data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500">
             {pageTitle}
           </h1>

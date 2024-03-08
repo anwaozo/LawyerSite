@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 
 export default function PricingbannerComponent({ pageImage, pageTitle }) {
   return (
-    <section class="inner-banner-area">
+    <section className="inner-banner-area">
       <Image
         src={`/${pageImage}`}
         width={1920}

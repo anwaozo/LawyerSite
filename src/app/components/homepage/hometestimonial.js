@@ -1,6 +1,8 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import dynamic from "next/dynamic";
+import { clientTestimonialSection } from "../../service-cms/homePage";
 
 export default function HometestimonialComponent() {
   return (
@@ -14,31 +16,31 @@ export default function HometestimonialComponent() {
                 data-aos-delay="200"
                 data-aos-duration="1500"
               >
-                What out clients say <span>about us</span>
+                {clientTestimonialSection.title}
+                {/* What out clients say <span>about us</span> */}
               </h3>
             </div>
             <div className="col-6">
-              <div
-                className="author-block"
-                data-aos="fade-left"
-                data-aos-delay="300"
-                data-aos-duration="1500"
-              >
-                <div className="author-photo">
-                  <img src="/images/testimonial.png" alt="" />
+              {clientTestimonialSection.clientTestimonial.map((value, i) => (
+                <div
+                  className="author-block"
+                  data-aos="fade-left"
+                  data-aos-delay="300"
+                  data-aos-duration="1500"
+                  key={i}
+                >
+                  <div className="author-photo">
+                    <img src={value.image} alt="" />
+                  </div>
+                  <div className="author-info">
+                    <h5>{value.name}</h5>
+                    <h6>{value.designation}</h6>
+                  </div>
+                  <div className="author-content">
+                    <p>{value.testimonial}</p>
+                  </div>
                 </div>
-                <div className="author-info">
-                  <h5>Brooklyn Simmons</h5>
-                  <h6>President of Sales</h6>
-                </div>
-                <div className="author-content">
-                  <p>
-                    “Amet minim mollit non deserunt ullamco est sit aliqua dolor
-                    do amet sint. Velit officia consequat duis enim velit
-                    mollit. Exercitation veniam consequat.”
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
