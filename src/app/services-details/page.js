@@ -8,10 +8,6 @@ const HeaderComponent = dynamic(() => import("../shared/header"), {
   ssr: true,
 });
 
-const ServicedetailsbannerComponent = dynamic(() => import("./servicebanner"), {
-  ssr: true,
-});
-
 const PageBannerComponent = dynamic(() => import("../shared/pageBanner"), {
   ssr: true,
 });

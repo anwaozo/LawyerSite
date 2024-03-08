@@ -1,4 +1,4 @@
-local_backend: true
+#local_backend: true
 backend:
   name: git-gateway
   repo: anwaozo/LawyerSite
@@ -152,30 +152,6 @@ collections:
                       widget: "string",
                     }
                   - { label: "Image", name: "image", widget: "image" }
-
-      - label: "About"
-        name: "about"
-        file: "content/pages/about.md"
-        fields:
-          - name: "MetaTags"
-            label: "Meta Tags"
-            widget: "object"
-            fields:
-              - { label: "Meta Title", name: "metatitle", widget: "string" }
-              - {
-                  label: "Meta Description",
-                  name: "metaDescription",
-                  widget: "string",
-                }
-          - name: "WelcomeSection"
-            label: "Welcome About Section"
-            widget: "object"
-            fields:
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Sub Heading", name: "subHeading", widget: "string" }
-              - { label: "Image", name: "image", widget: "image" }
-
-          - { label: "Body", name: "body", widget: "markdown" }
 
       - name: "ourPosts"
         label: "Our Posts Page"

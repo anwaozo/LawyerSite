@@ -11,10 +11,6 @@ const HomeaboutComponent = dynamic(() => import("./homeabout"));
 
 const Homelegalcomponent = dynamic(() => import("./homelegal"));
 
-// const Homeverticalcomponent = dynamic(() => import("./homevertical"), {
-//   ssr: true,
-// });
-
 const Homeverticalcomponent = dynamic(
   () => import("../../shared/bussinessInformationSection"),
   {
