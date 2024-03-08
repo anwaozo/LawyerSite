@@ -7,7 +7,6 @@ import { format } from "date-fns";
 
 export default function HomepostComponent() {
   const { title, sectionLink, posts } = ourPostsSection;
-  console.log(posts);
   return (
     <section className="post-area">
       <div className="page-container">

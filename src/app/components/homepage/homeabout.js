@@ -10,7 +10,7 @@ export default function HomeaboutComponent() {
     var a = 0;
     if (window) {
       $(window).scroll(function () {
-        var oTop = $("#counter").offset().top - window.innerHeight;
+        var oTop = $("#counter").offset()?.top - window.innerHeight;
         if (a == 0 && $(window).scrollTop() > oTop) {
           $(".counter-value").each(function () {
             var $this = $(this),
@@ -47,7 +47,7 @@ export default function HomeaboutComponent() {
     }
   }, []);
   const { title, subHeading, sectionLink, sectionInfo } = legalPartnerSection;
-  console.log(sectionInfo,"check")
+  console.log(sectionInfo, "check");
   return (
     <section className="about-area">
       <div className="page-container">
