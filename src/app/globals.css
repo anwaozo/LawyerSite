@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Satisfy&display=swap');
 @import url(./fonts.css);
 @import url(./grids.css);
+@import url(./responsive.css);
 
 :root {
 	--color-white: #ffffff;

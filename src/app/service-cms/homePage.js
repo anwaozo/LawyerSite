@@ -1,3 +1,4 @@
+"use client";
 import {
   attributes,
   react as HomeContent,

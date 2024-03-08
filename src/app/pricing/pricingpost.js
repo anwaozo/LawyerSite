@@ -6,17 +6,17 @@ export default function PricingpostComponent() {
   return (
     <main>
 			{/* <!-- Pricing Section --> */}
-			<section class="pricing-block">
-				<div class="page-container">
-					<div class="row">
-						<div class="col-4">
+			<section className="pricing-block">
+				<div className="page-container">
+					<div className="row">
+						<div className="col-4">
 							<div
-								class="pricing-item"
+								className="pricing-item"
 								data-aos="zoom-in"
 								data-aos-delay="200"
 								data-aos-duration="1500"
 							>
-								<div class="pricing-content">
+								<div className="pricing-content">
 									<h5>Subscription 1</h5>
 									<p>
 										Neque porro quisquam est, qui dolorem
@@ -31,14 +31,14 @@ export default function PricingpostComponent() {
 								</div>
 							</div>
 						</div>
-						<div class="col-4">
+						<div className="col-4">
 							<div
-								class="pricing-item"
+								className="pricing-item"
 								data-aos="zoom-in"
 								data-aos-delay="400"
 								data-aos-duration="1500"
 							>
-								<div class="pricing-content">
+								<div className="pricing-content">
 									<h5>Subscription 2</h5>
 									<p>
 										toNemo enim ipsam voluptatem quia
@@ -53,14 +53,14 @@ export default function PricingpostComponent() {
 								</div>
 							</div>
 						</div>
-						<div class="col-4">
+						<div className="col-4">
 							<div
-								class="pricing-item"
+								className="pricing-item"
 								data-aos="zoom-in"
 								data-aos-delay="600"
 								data-aos-duration="1500"
 							>
-								<div class="pricing-content">
+								<div className="pricing-content">
 									<h5>Subscription 3</h5>
 									<p>
 										sed do eiusmod tempor incididunt ut
@@ -79,45 +79,45 @@ export default function PricingpostComponent() {
 			</section>
 
 			{/* <!-- Testimonial Section --> */}
-			<section class="eveluation-form-area">
-				<div class="page-container">
-					<div class="row">
-						<div class="col-6">
+			<section className="eveluation-form-area">
+				<div className="page-container">
+					<div className="row">
+						<div className="col-6">
 							<div
-								class="evaluation-form-box"
+								className="evaluation-form-box"
 								data-aos="fade-right"
 								data-aos-delay="200"
 								data-aos-duration="1500"
 							>
 								<h3>Get in touch</h3>
 								<form>
-									<div class="form-group">
+									<div className="form-group">
 										<input
 											type="text"
-											class="inputs"
+											className="inputs"
 											placeholder="Your full name"
 										/>
 									</div>
-									<div class="form-group">
+									<div className="form-group">
 										<input
 											type="email"
-											class="inputs"
+											className="inputs"
 											placeholder="me@company.com"
 										/>
 									</div>
-									<div class="form-group">
+									<div className="form-group">
 										<textarea
-											class="inputs"
+											className="inputs"
 											placeholder="Your message..."
 										></textarea>
 									</div>
-									<button type="submit" class="btn-submit">
+									<button type="submit" className="btn-submit">
 										Send message
 									</button>
 								</form>
 							</div>
 						</div>
-						<div class="col-6">
+						<div className="col-6">
 							<h4
 								data-aos="fade-left"
 								data-aos-delay="200"

@@ -1,48 +1,30 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import dynamic from "next/dynamic";
 
-const HeaderComponent = dynamic(() => import("../../shared/header"), {
-  ssr: true,
-});
+const HeaderComponent = dynamic(() => import("../../shared/header"));
 
-const HomesectionComponent = dynamic(() => import("./homesection"), {
-  ssr: true,
-});
+const HomesectionComponent = dynamic(() => import("./homesection"));
 
-const HomeaboutComponent = dynamic(() => import("./homeabout"), {
-  ssr: true,
-});
+const HomeaboutComponent = dynamic(() => import("./homeabout"));
 
-const Homelegalcomponent = dynamic(() => import("./homelegal"), {
-  ssr: true,
-});
+const Homelegalcomponent = dynamic(() => import("./homelegal"));
 
-const Homeverticalcomponent = dynamic(() => import("./homevertical"), {
-  ssr: true,
-});
+const Homeverticalcomponent = dynamic(() => import("./homevertical"));
 
-const Homecolleguecomponent = dynamic(() => import("./homecollegue"), {
-  ssr: true,
-});
+const Homecolleguecomponent = dynamic(() => import("./homecollegue"));
 
-const Homeevaluationcomponent = dynamic(() => import("./homeevaluation"), {
-  ssr: true,
-});
+const Homeevaluationcomponent = dynamic(() => import("./homeevaluation"));
 
-const HomepostComponent = dynamic(() => import("./homepost"), {
-  ssr: true,
-});
+const HomepostComponent = dynamic(() => import("./homepost"));
 
-const HometestimonialComponent = dynamic(() => import("./hometestimonial"), {
-  ssr: true,
-});
+const HometestimonialComponent = dynamic(() => import("./hometestimonial"));
 
-const HomefooterComponent = dynamic(() => import("./homefooter"), {
-  ssr: true,
-});
+const HomefooterComponent = dynamic(() => import("./homefooter"));
 
 export default function Home() {
+
   return (
     <React.Fragment>
       <HeaderComponent />

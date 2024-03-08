@@ -48,6 +48,11 @@ export default function HeaderComponent() {
                 ))}
               </ul>
             </nav>
+            <div className="mobile-menu">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
           </div>
         </div>
       </header>

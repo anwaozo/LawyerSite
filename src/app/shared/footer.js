@@ -1,23 +1,22 @@
 import Image from "next/image";
 import React from "react";
-import { footerInfo } from "../service-cms/applicationFragments";
-
+// import { footerInfo } from "../service-cms/applicationFragments";
+// import attributes from "../service-cms/applicationFragments";
 export default function FooterComponent() {
-  const { logo, copyright: copyrightText, quickMenu, socialMenu } = footerInfo;
-
+  // console.log(attributes,"check")
   return (
     <React.Fragment>
       <footer className="footer">
         <div className="page-container">
           <a className="footer-logo">
-            <img
+            {/* <img
               src={logo}
               width=""
               height=""
               loading="lazy"
               decoding="async"
               alt="Logo"
-            />
+            /> */}
           </a>
           <div className="footer-menu">
             <a>Teams</a>

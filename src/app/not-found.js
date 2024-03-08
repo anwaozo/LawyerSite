@@ -22,9 +22,9 @@ export default function NotFound() {
     <React.Fragment>
       <HeaderComponent />
       <main>
-        <section class="not-found-area">
-          <div class="page-container">
-            <div class="not-found-block">
+        <section className="not-found-area">
+          <div className="page-container">
+            <div className="not-found-block">
               <img
                 src="/images/not-found-photo.png"
                 loading="lazy"
@@ -34,7 +34,7 @@ export default function NotFound() {
               <h1>404</h1>
               <h5>We couldn&apos;t find that page, Go back home</h5>
               <h6>OR</h6>
-              <div class="not-found-menu">
+              <div className="not-found-menu">
                 <ul>
                   <li>
                     <a href="#">Team</a>

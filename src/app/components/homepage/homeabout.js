@@ -3,9 +3,9 @@ import Image from "next/image";
 import React, { useEffect } from "react";
 import dynamic from "next/dynamic";
 import { legalPartnerSection } from "../../service-cms/homePage";
+// import { legalPartnerSection } from "../../service-cms/homePage";
 
 export default function HomeaboutComponent() {
-  console.log(legalTeamSection);
   useEffect(() => {
     var a = 0;
     if(window){
@@ -40,7 +40,7 @@ export default function HomeaboutComponent() {
     }
     
   }, []);
-  const { title, subHeading, sectionLink, sectionInfo } = legalTeamSection;
+  const { title, subHeading, sectionLink, sectionInfo } = legalPartnerSection;
   return (
     <section className="about-area">
       <div className="page-container">
@@ -82,7 +82,7 @@ export default function HomeaboutComponent() {
                   data-aos-delay="200"
                   data-aos-duration="1500"
                 >
-                  <h6 class="counter-value" data-count={info?.displayedNumber}>
+                  <h6 className="counter-value" data-count={info?.displayedNumber}>
                     0
                   </h6>
                   <p>{info?.title}</p>

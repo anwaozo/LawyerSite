@@ -1,10 +1,10 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import { legalPracticesSection } from "../../service-cms/homePage";
 
 export default function Homelegalcomponent() {
-  // console.log(legalPracticesSection);
-  const { title, sectionImage, sectionLink, sectionInfo } =
+  const { title, sectionImage, sectionLink, legalPractices, sectionInfo } =
     legalPracticesSection;
   return (
     <section className="legal-practice-area">
@@ -27,7 +27,30 @@ export default function Homelegalcomponent() {
             </a>
           </header>
           <div className="row">
-            <div
+            {legalPractices.map((val, i) => (
+              <div
+                className="col-4"
+                data-aos="fade-right"
+                key={i}
+                data-aos-delay={`${(i + 2) * 100}`}
+                data-aos-duration="1500"
+              >
+                <div className="legal-item">
+                  <div className="legal-icon">
+                    <img
+                      src={val.featuredicon}
+                      width=""
+                      height=""
+                      loading="lazy"
+                      decoding="async"
+                      alt=""
+                    />
+                  </div>
+                  <p>{val.title}</p>
+                </div>
+              </div>
+            ))}
+            {/* <div
               className="col-4"
               data-aos="fade-right"
               data-aos-delay="200"
@@ -146,7 +169,7 @@ export default function Homelegalcomponent() {
                 </div>
                 <p>EMPLOYMENT LAW</p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 
 export default function ContactdetailsbannerComponent() {
   return (
-    <section class="inner-banner-area">
+    <section className="inner-banner-area">
 			<Image
 				src="/images/contact-banner.jpg"
 				width={1920}
@@ -14,8 +14,8 @@ export default function ContactdetailsbannerComponent() {
 				decoding="async"
 				alt=""
 			/>
-			<div class="inner-banner-content">
-				<div class="page-container">
+			<div className="inner-banner-content">
+				<div className="page-container">
 					<h1
 						data-aos="fade-up"
 						data-aos-delay="200"
