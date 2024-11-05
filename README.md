@@ -1,4 +1,4 @@
-# Next.js Netlify Sample
+# LawyerSite Template
 
 This is a sample Next.js project configured for easy deployment to Netlify.
 
@@ -6,7 +6,7 @@ This is a sample Next.js project configured for easy deployment to Netlify.
 
 Click the button below to deploy this project to Netlify:
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/yourusername/nextjs-netlify-sample)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/anwaozo/LawyerSite)
 
 ## Local Development
 
